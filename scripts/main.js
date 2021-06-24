@@ -1,4 +1,5 @@
-import endpointsData from './data.js'
+import './darkmode.js'
+import './navigation.js'
 
 function whiteSpace(repeat) {
     return '&nbsp;'.repeat(repeat)
@@ -41,23 +42,22 @@ function createEndpointElement({ title, method, route, request, response }) {
     `
 }
 
-const main = document.body.getElementsByTagName('main')[0]
-const endpoints = endpointsData.map((item) => createEndpointElement(item))
+function appendEndpointData(endpointData) {
+    const mainElement = document.getElementsByTagName('main')[0]
+    const endpoints = endpointData.map((item) => createEndpointElement(item))
 
-main.innerHTML = endpoints
+    mainElement.innerHTML = endpoints
 
-const endpointsElement = document.querySelectorAll('.endpoint')
+    const endpointsElement = document.querySelectorAll('.endpoint')
 
-for (let endpoint of endpointsElement) {
-    const detailsElement = endpoint.querySelectorAll('details')
+    for (let endpoint of endpointsElement) {
+        const detailsElement = endpoint.querySelectorAll('details')
 
-    for (let detail of detailsElement) {
-        const alterdHtmlText = alterInnerHtml(detail.innerHTML)
-        detail.innerHTML = alterdHtmlText
+        for (let detail of detailsElement) {
+            const alterdHtmlText = alterInnerHtml(detail.innerHTML)
+            detail.innerHTML = alterdHtmlText
+        }
     }
 }
 
-const checkbox = document.getElementById('checkbox')
-checkbox.addEventListener('change', () => {
-    document.body.classList.toggle('dark')
-})
+export default appendEndpointData

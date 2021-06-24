@@ -6,7 +6,7 @@ body {
     transition: background 0.5s linear;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 250px;
-    margin-top: 100px;
+    margin-top: 90px;
     background: white;
 }
 
@@ -15,10 +15,10 @@ body.dark {
     color: aliceblue;
 }
 
-header {
+nav {
     background: inherit;
     z-index: 99;
-    height: 85px;
+    height: 80px;
     width: calc(100% - 250px);
     border-bottom: 2px solid #ddd6;
     position: fixed;
