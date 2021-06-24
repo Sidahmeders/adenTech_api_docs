@@ -1,5 +1,9 @@
+main {
+    white-space: pre-line;
+}
+
 .endpoint {
-    width: 70vw;
+    width: 75vw;
     margin: 0 2vw;
     background-color: rgba(192, 218, 218, 0.4);
     padding: 20px 40px;
@@ -91,13 +95,13 @@ summary:after {
 
 code {
     font-size: 16px;
-    width: 70vw;
+    width: 75vw;
 }
 
 code span {
     padding: 12px 8px 12px 15px;
-    background: rgb(140, 167, 165);
-    color: #fff;
+    background: rgba(173, 192, 196, 0.4);
+    color: #0b97f5;
     border-radius: 5px;
     margin-left: 10px;
 }
