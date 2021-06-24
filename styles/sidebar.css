@@ -1,0 +1,8 @@
+#sidebar {
+    background: red;
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
