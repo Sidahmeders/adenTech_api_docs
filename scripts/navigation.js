@@ -1,32 +1,32 @@
 const navigation = `
     <sidebar id="sidebar">
     <div class="sidebar-logo">
-        AD<span>T</span>ECH
+        <a href="/">AD<span>T</span>ECH</a>
     </div>
     <div class="sections">
         <div class="section">
-            users endpoints
+            <a href="/pages/users.html">users endpoints</a>
         </div>
         <div class="section">
-            patients endpoints
+            <a href="/pages/patients.html">patients endpoints</a>
         </div>
         <div class="section">
-            general endpoints
+            <a href="/pages/general.html">general endpoints</a>
         </div>
         <div class="section">
-            oce endpoints
+            <a href="/pages/oce.html">oce endpoints</a>
         </div>
         <div class="section">
-            odf endpoints
+            <a href="/pages/odf.html">odf endpoints</a>
         </div>
         <div class="section">
-            paro endpoints
+            <a href="/pages/paro.html">paro endpoints</a>
         </div>
         <div class="section">
-            prothese endpoints
+            <a href="/pages/prothese.html">prothese endpoints</a>
         </div>
         <div class="section">
-            pcb endpoints
+            <a href="/pages/pcb.html">pcb endpoints</a>
         </div>
     </div>
     </sidebar>
@@ -34,7 +34,7 @@ const navigation = `
     <header>
     <svg width="900px" height="85px">
         <symbol id="s-text">
-        <text text-anchor="middle" x="25%" y="70%">
+        <text text-anchor="middle" x="30%" y="65%">
             AdenTech API Endpoints
             </text>
         </symbol>
