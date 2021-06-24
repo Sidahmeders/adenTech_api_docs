@@ -34,7 +34,7 @@ const navigation = `
     <header>
     <svg width="900px" height="85px">
         <symbol id="s-text">
-        <text text-anchor="middle" x="30%" y="65%">
+        <text text-anchor="middle" x="30%" y="60%">
             AdenTech API Endpoints
             </text>
         </symbol>
