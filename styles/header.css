@@ -20,18 +20,61 @@ header {
     z-index: 99;
     height: 85px;
     width: calc(100% - 250px);
-    border-bottom: 2px solid #6663;
+    border-bottom: 2px solid #ddd6;
     position: fixed;
     top: 0;
     right: 0;
 }
 
-header h1 {
-    font-weight: 400;
-    margin-left: 20px;
-    color: #467;
+/* Fancy Title styles */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+svg {
+    font: 2.5em 'Montserrat';
 }
 
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 1px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #16344d;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #006584;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #0071bd;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #00bdb4;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #fdb731;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+/* dark mode Theme styles*/
 #theme {
     position: absolute;
     right: 5%;

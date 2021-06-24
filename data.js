@@ -51,7 +51,7 @@ export default [
                 -gender: "string" ! [options]< male, female >,
                 -faculty: "string" !,
                 -country: "string",
-                -year_of_study: "integer" < 1-st, 2-nd, 3-rd, 4-th, 5-th, 6-th >,
+                -year_of_study: "integer" < 1st, 2nd, 3rd, 4th, 5th, 6th >,
                 -grade: "string" [options] < student, resident, assistant, master_assistant, professor >,
                 -specialty: "string" [options]< OCE, ODF, PARO, PROTHESE, PCB >
             )

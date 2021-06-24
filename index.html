@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/cards.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
     <title>Document</title>
@@ -11,11 +12,53 @@
 <body>
 
     <sidebar id="sidebar">
-
+        <div class="sidebar-logo">
+            AD<span>T</span>ECH
+        </div>
+        <div class="sections">
+            <div class="section">
+                users endpoints
+            </div>
+            <div class="section">
+                patients endpoints
+            </div>
+            <div class="section">
+                general endpoints
+            </div>
+            <div class="section">
+                oce endpoints
+            </div>
+            <div class="section">
+                odf endpoints
+            </div>
+            <div class="section">
+                paro endpoints
+            </div>
+            <div class="section">
+                prothese endpoints
+            </div>
+            <div class="section">
+                pcb endpoints
+            </div>
+        </div>
     </sidebar>
 
     <header>
-        <h1>AdenTech API Endpoints</h1>
+        <svg width="900px" height="85px">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="25%" y="70%">
+                  AdenTech API Endpoints
+                </text>
+            </symbol>
+            <g class = "g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+          
         <div id="theme">
             <input type="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="label">
@@ -24,10 +67,72 @@
         </div>
     </header>
 
-
-    <cards class="cards">
+    <cards id="cards">
         <div class="card">
             <h2>Users Ednpoints</h2>
+            <ul>
+                <li>[regitser/create] users, [login/get] users</li>
+                <li>get all patients appoitment by user Id</li> 
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Patients Ednpoints</h2>
+            <ul>
+                <li>get all patients record by user Id</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>General Examination Forms Ednpoints</h2>
+            <ul>
+                <li>post and get examintaion_endobuccal</li>
+                <li>post and get examintaion_exobuccal</li>
+                <li>post and get medical_anamnese</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>OCE Forms Ednpoints</h2>
+            <ul>
+                <li>post and get carie_dentaire</li>
+                <li>post and get signs_et_radio</li>
+                <li>post and get traumatisme_dentaire_dent</li>
+                <li>post and get traumatisme_dentaire_patient</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>ODF Forms Ednpoints</h2>
+            <ul>
+                <li>post and get moulage</li>
+                <li>post and get odf_anamense</li>
+                <li>post and get odf_diagnostic_treatment</li>
+                <li>post and get odf_endobuccal</li>
+                <li>post and get odf_exobuccal</li>
+                <li>post and get resulte_cepholomettrie</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>PARO Forms Ednpoints</h2>
+            <ul>
+                <li>post and get examen_gingival</li>
+                <li>post and get examen_sondage</li>
+                <li>post and get indices</li>
+                <li>post and get interpretaion_radiologic_paro</li>
+                <li>post and get paro_diagnostic_treatment</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Prothese Forms Endpoints</h2>
+            <ul>
+                <li>post and get edente_partielle</li>
+                <li>post and get edente_total</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>PCB Forms Endpoints</h2>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
         </div>
     </cards>
     

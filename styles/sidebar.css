@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css2?family=Jost&display=swap);
+
 #sidebar {
     z-index: 99;
     height: 100vh;
@@ -5,6 +8,81 @@
     position: fixed;
     left: 0;
     top: 0;
-    margin-top: 83px;
-    border-right: 2px solid #6662;
+    background: #9991;
+}
+
+.sidebar-logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: rgb(145, 145, 146);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+.sidebar-logo span {
+    color: rgb(187, 206, 211);
+}
+
+.sidebar-logo::after {
+    content: 'Docs';
+    position: absolute;
+    font-size: 18px;
+    bottom: -30%;
+    left: 65%;
+    color: rgb(226, 183, 103);
+}
+
+.sections {
+    margin-top: 16%;
+}
+.section::selection {
+    color: inherit;
+}
+
+.section {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    padding-left: 10%;
+}
+
+.section:hover {
+    cursor: pointer;
+}
+
+.section:active {
+    background-color: #e8f4ff;
+}
+
+.section::before {
+    padding: 0 10px;
+    transform: translateY(1px);
+}
+.section:nth-child(1)::before {
+    content: '⚡';
+}
+.section:nth-child(2)::before {
+    content: '🔥';
+}
+.section:nth-child(3)::before {
+    content: '☕';
+}
+.section:nth-child(4)::before {
+    content: '⚓';
+}
+.section:nth-child(5)::before {
+    content: '🍃';
+}
+.section:nth-child(6)::before {
+    content: '🌔';
+}
+.section:nth-child(7)::before {
+    content: '🎡';
+}
+.section:nth-child(8)::before {
+    content: '🎩';
 }

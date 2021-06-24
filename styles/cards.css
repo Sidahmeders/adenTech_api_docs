@@ -1,0 +1,31 @@
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 20px;
+    padding: 25px;
+    width: 32vw;
+    min-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #6662;
+    border: 2px solid #ddd2;
+    transition: 1s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translate(1px, -1px);
+    box-shadow: 1px 1px 30px #9993;
+}
+
+.card ul {
+    list-style: circle;
+}
+
+.card ul li {
+    text-align: left;
+    line-height: 25px;
+}
