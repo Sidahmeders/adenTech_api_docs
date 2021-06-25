@@ -4,30 +4,30 @@ const navigation = `
         <a href="/">AD<span>T</span>ECH</a>
     </div>
     <div class="sections">
-        <div class="section">
-            <a href="/pages/users.html">users endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/patients.html">patients endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/general.html">general endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/oce.html">oce endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/odf.html">odf endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/paro.html">paro endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/prothese.html">prothese endpoints</a>
-        </div>
-        <div class="section">
-            <a href="/pages/pcb.html">pcb endpoints</a>
-        </div>
+        <a class="section" href="/pages/users.html">
+            users endpoints
+        </a>
+        <a class="section" href="/pages/patients.html">
+            patients endpoints
+        </a>
+        <a class="section" href="/pages/general.html">
+            general endpoints
+        </a>
+        <a class="section" href="/pages/oce.html">
+            oce endpoints
+        </a>
+        <a class="section" href="/pages/odf.html">
+            odf endpoints
+        </a>
+        <a class="section" href="/pages/paro.html">
+            paro endpoints
+        </a>
+        <a class="section" href="/pages/prothese.html">
+        prothese endpoints
+        </a>
+        <a class="section" href="/pages/pcb.html">
+            pcb endpoints
+        </a>
     </div>
     </sidebar>
 

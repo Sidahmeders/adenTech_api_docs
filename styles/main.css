@@ -2,18 +2,23 @@ main {
     white-space: pre-line;
 }
 
+h1 {
+    font-weight: 400;
+    margin-top: 10%;
+    margin-left: 5%;
+    font-size: 28px;
+}
+
 .endpoint {
     width: 75vw;
     margin: 0 2vw;
-    background-color: rgba(192, 218, 218, 0.4);
+    box-shadow: 0 0 30px #cdd1da66;
     padding: 20px 40px;
     border-radius: 20px;
-    font-family: monospace;
 }
 
 details {
     color: #fff;
-    background: #878d99;
     border: 1px solid;
     border-radius: 4px;
     min-height: 48px;
@@ -36,8 +41,8 @@ details:active {
     border-color: #6d7380;
 }
 
-details ::-webkit-details-marker {
-    display: none;
+details > summary:first-of-type {
+    list-style-type: none;
 }
 
 details + details {
@@ -100,7 +105,7 @@ code {
 
 code span {
     padding: 12px 8px 12px 15px;
-    background: rgba(173, 192, 196, 0.4);
+    background: rgba(182, 193, 196, 0.4);
     border-radius: 5px;
     margin-left: 10px;
 }

@@ -7,7 +7,8 @@ function whiteSpace(repeat) {
 
 function alterInnerHtml(innerHTML) {
     innerHTML = innerHTML.replace(/!/g, `${whiteSpace(1)}&ltrequired&gt`)
-    innerHTML = innerHTML.replace(/-/g, whiteSpace(4))
+    innerHTML = innerHTML.replace(/@/g, '[options]')
+    innerHTML = innerHTML.replace(/-/g, whiteSpace(8))
 
     return innerHTML
 }

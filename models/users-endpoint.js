@@ -48,12 +48,12 @@ export default [
                 -profile_image: "buffer" !,
                 -identity_card: "buffer" !,
                 -phone_number: "integer",
-                -gender: "string" ! [options]< male, female >,
+                -gender: "string" ! @< male, female >,
                 -faculty: "string" !,
                 -country: "string",
                 -year_of_study: "integer" < 1st, 2nd, 3rd, 4th, 5th, 6th >,
-                -grade: "string" [options] < student, resident, assistant, master_assistant, professor >,
-                -specialty: "string" [options]< OCE, ODF, PARO, PROTHESE, PCB >
+                -grade: "string" @ < student, resident, assistant, master_assistant, professor >,
+                -specialty: "string" @< OCE, ODF, PARO, PROTHESE, PCB >
             )
         `,
         response: `
@@ -75,7 +75,7 @@ export default [
                         ---year_of_study: "integer",
                         ---grade: "string",
                         ---specialty: "string",
-                        ---role: "string" [options]< _unAuthorized, student, professor >
+                        ---role: "string" @< _unAuthorized, student, professor >
                     --}
                 -}
             }
