@@ -13,6 +13,8 @@
     box-shadow: 0 0 20px #6662;
     border: 2px solid #ddd2;
     transition: 1s;
+    color: inherit;
+    text-decoration: none;
 }
 
 .card:hover {
