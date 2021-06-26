@@ -2,7 +2,7 @@ export default [
     {
         title: 'examenEndobuccal collection',
         method: 'POST',
-        route: 'generalExamination/examenEndobuccal',
+        route: '/generalExamination/examenEndobuccal',
         request: `
             (
                 -patient_id: "string" !,
@@ -53,7 +53,7 @@ export default [
     {
         title: 'medicalAnamnese collection',
         method: 'POST',
-        route: 'generalExamination/medicalAnamnese',
+        route: '/generalExamination/medicalAnamnese',
         request: `
             (
                 -patient_id: "string" !,

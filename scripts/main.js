@@ -1,16 +1,33 @@
-import './darkmode.js'
 import './navigation.js'
+import './darkmode.js'
 
-function whiteSpace(repeat) {
-    return '&nbsp;'.repeat(repeat)
-}
+function appendEndpointData(endpointData) {
+    const mainElement = document.getElementsByTagName('main')[0]
+    const endpoints = endpointData.map((item) => createEndpointElement(item))
 
-function alterInnerHtml(innerHTML) {
-    innerHTML = innerHTML.replace(/!/g, `${whiteSpace(1)}&ltrequired&gt`)
-    innerHTML = innerHTML.replace(/@/g, '[options]')
-    innerHTML = innerHTML.replace(/-/g, whiteSpace(8))
+    mainElement.innerHTML = endpoints
 
-    return innerHTML
+    const endpointsElement = document.querySelectorAll('.endpoint')
+
+    for (let endpoint of endpointsElement) {
+        const detailsElement = endpoint.querySelectorAll('details')
+
+        for (let detail of detailsElement) {
+            const alterdHtml = alterInnerHtml(detail.innerHTML)
+            const alterdText = alterInnerText(detail)
+
+            detail.innerHTML = alterdHtml
+
+            // chnage request/response entry color
+            for (let entry of alterdText) {
+                const newText = detail.innerHTML.replace(
+                    entry,
+                    `<span style="color:white;">${entry}</span>`
+                )
+                detail.innerHTML = newText
+            }
+        }
+    }
 }
 
 function createEndpointElement({ title, method, route, request, response }) {
@@ -43,22 +60,36 @@ function createEndpointElement({ title, method, route, request, response }) {
     `
 }
 
-function appendEndpointData(endpointData) {
-    const mainElement = document.getElementsByTagName('main')[0]
-    const endpoints = endpointData.map((item) => createEndpointElement(item))
+function whiteSpace(repeat) {
+    return '&nbsp;'.repeat(repeat)
+}
 
-    mainElement.innerHTML = endpoints
+function alterInnerHtml(innerHTML) {
+    innerHTML = innerHTML.replace(/!/g, `${whiteSpace(1)}&ltrequired&gt`)
+    innerHTML = innerHTML.replace(/@/g, '[options]')
+    innerHTML = innerHTML.replace(/-/g, whiteSpace(8))
 
-    const endpointsElement = document.querySelectorAll('.endpoint')
+    return innerHTML
+}
 
-    for (let endpoint of endpointsElement) {
-        const detailsElement = endpoint.querySelectorAll('details')
+function alterInnerText(detail) {
+    let innerText = detail.children[1].innerText
+    let entries = innerText.split(':').map((item) => item.replace(/\n/g, ''))
 
-        for (let detail of detailsElement) {
-            const alterdHtmlText = alterInnerHtml(detail.innerHTML)
-            detail.innerHTML = alterdHtmlText
-        }
+    if (innerText.includes('token')) {
+        entries = mapEntries(entries, 3)
+    } else {
+        entries = mapEntries(entries, 1)
     }
+
+    return entries
+}
+
+function mapEntries(entries, index) {
+    return entries.map((item) => {
+        item = item.split('-')[index]
+        return item
+    })
 }
 
 export default appendEndpointData
