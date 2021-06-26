@@ -65,8 +65,11 @@ function whiteSpace(repeat) {
 }
 
 function alterInnerHtml(innerHTML) {
-    innerHTML = innerHTML.replace(/!/g, `${whiteSpace(1)}&ltrequired&gt`)
-    innerHTML = innerHTML.replace(/@/g, '[options]')
+    innerHTML = innerHTML.replace(
+        /!/g,
+        `<span style="color:orange;">${whiteSpace(1)}&ltrequired&gt</span>`
+    )
+    innerHTML = innerHTML.replace(/@/g, '<span style="color:#6dd">[options]</span>')
     innerHTML = innerHTML.replace(/-/g, whiteSpace(8))
 
     return innerHTML

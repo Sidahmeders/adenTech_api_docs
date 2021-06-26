@@ -6,7 +6,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -overture_buccal: "string" @<suffisant, < insuffisant, [number] >,
+                -overture_buccal: "string" @< suffisant, < insuffisant, [number] > >,
                 -hygiene_buccaux_dentaires: "string" ! @< mauvais, moyenne, bon >,
                 -etat_muqueuses_levre_sup: "string" @< RAS, [anything]  >,
                 -etat_muqueuses_levre_inf: "string" @< RAS, [anything]  >,
