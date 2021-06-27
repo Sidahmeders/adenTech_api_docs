@@ -62,11 +62,19 @@ details p {
 }
 
 details.request {
-    background: #76a5cc;
+    background: #6e9dc4;
 }
 
 details.response {
     background: #419736;
+}
+
+details.headers {
+    background: #973d36;
+}
+
+details.specification {
+    background: rgb(75, 133, 113);
 }
 
 summary {

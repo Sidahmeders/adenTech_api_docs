@@ -51,7 +51,7 @@ export default [
                 -gender: "string" ! @< male, female >,
                 -faculty: "string" !,
                 -country: "string",
-                -year_of_study: "integer" < 1st, 2nd, 3rd, 4th, 5th, 6th >,
+                -year_of_study: "integer" @< 1st, 2nd, 3rd, 4th, 5th, 6th >,
                 -grade: "string" @ < student, resident, assistant, master_assistant, professor >,
                 -specialty: "string" @< OCE, ODF, PARO, PROTHESE, PCB >
             )
@@ -79,6 +79,18 @@ export default [
                     --}
                 -}
             }
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "bearerToken" !
+                -ContentType: "application/json"
+        `,
+        specification: `
+            *role*
+                -_unAuthorized: can't create/update/delete new patients or patients record
+                -_student: can create/update new patients and patients record
+                -_assistant/_professor: can create/update new patients and patients record, plus some related utilities 
+                    based on specialty (odf_chart, cephalometric_chart, etc...)
         `
     }
 ]
