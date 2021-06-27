@@ -80,11 +80,6 @@ export default [
                 -}
             }
         `,
-        headers: `
-            *Request Headers*
-                -authToken: "bearerToken" !
-                -ContentType: "application/json"
-        `,
         specification: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
@@ -92,5 +87,69 @@ export default [
                 -_assistant/_professor: can create/update new patients and patients record, plus some related utilities 
                     based on specialty (odf_chart, cephalometric_chart, etc...)
         `
+    },
+    {
+        title: 'Return/Get all the patients a user have',
+        method: 'GET',
+        route: '/users/patients',
+        response: `
+            {
+                -data: {
+                    --patients: [
+                        ---{
+                            ----_id: "string",
+                            ----user_id: "string", 
+                            ----first_name: "string",
+                            ----last_name: "string",
+                            ----gender: "string",    
+                            ----age: "string",
+                            ----address: "string",
+                            ----phone_number: "string",
+                            ----email: "string",
+                            ----marital_status: "string",
+                            ----job: "string",
+                            ----specialty_access: "arrayList",
+                            ----appointment: "date"
+                        ---},
+                        ---{
+                            ----...
+                            ----...
+                        ---},
+                        ---etc...
+                    --]
+                -}
+            }        
+        `,
+        headers: `
+            -authToken: "bearer_token" !
+        `
+    },
+    {
+        title:
+            '[Add or Update] appointment to an existing patient OR [create a new patient] with appointment',
+        method: 'POST',
+        route: '/users/patients/appointment',
+        request: `
+            (
+                -appointment: "date" !
+            )
+        `,
+        response: `
+        {
+            -data: {
+                --patient: {
+                    ---_id: "string",
+                    ---full_name: "string",
+                    ---appointment: "date",
+                    ---phone_number: "integer"
+               --}
+            --}
+        -}        
+        `
+    },
+    {
+        title: 'Return/Get all the appointments a user have',
+        method: 'GET',
+        route: '/users/patients/appointments'
     }
 ]

@@ -125,8 +125,10 @@ function alterInnerText(detail) {
 
     // match the object entries that are preceded by minus(-) and end by colons(:)
     let entries = innerText.split(':').map((item) => item.replace(/\n/g, ''))
-    if (innerText.includes('token')) {
+    if (innerText.includes('token:') | innerText.includes('patient:')) {
         entries = mapEntries(entries, 3)
+    } else if (innerText.includes('patients:')) {
+        entries = mapEntries(entries, 4)
     } else {
         entries = mapEntries(entries, 1)
     }
