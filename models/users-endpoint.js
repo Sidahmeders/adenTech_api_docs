@@ -84,7 +84,7 @@ export default [
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
-                -_assistant/_professor: can create/update new patients and patients record, plus some related utilities 
+                -_assistant _professor: can create/update new patients and patients record, plus some related utilities 
                     based on specialty (odf_chart, cephalometric_chart, etc...)
         `
     },
@@ -121,7 +121,8 @@ export default [
             }        
         `,
         headers: `
-            -authToken: "bearer_token" !
+            *Request Headers*
+                -authToken: "bearer_token" !
         `
     },
     {
@@ -135,21 +136,44 @@ export default [
             )
         `,
         response: `
-        {
-            -data: {
-                --patient: {
-                    ---_id: "string",
-                    ---full_name: "string",
-                    ---appointment: "date",
-                    ---phone_number: "integer"
-               --}
-            --}
-        -}        
+            {
+                -data: {
+                    --patient: {
+                        ---_id: "string",
+                        ---full_name: "string",
+                        ---appointment: "date",
+                        ---phone_number: "integer"
+                --}
+                -}
+            }
+        `,
+        headers: `
+        *Request Headers*
+            -authToken: "bearer_token" !
         `
     },
     {
         title: 'Return/Get all the appointments a user have',
         method: 'GET',
-        route: '/users/patients/appointments'
+        route: '/users/patients/appointments',
+        response: `
+            {
+                -data: {
+                    --patients: [
+                        ---{
+                            ----_id: "string",
+                            ---appointment: "date",
+                            ---full_name: "string",
+                            ---phone_number: "integer"
+                        ---},
+                        ---{ ... }
+                    ---]
+                -}
+            }
+        `,
+        headers: `
+        *Request Headers*
+            -authToken: "bearer_token" !
+        `
     }
 ]

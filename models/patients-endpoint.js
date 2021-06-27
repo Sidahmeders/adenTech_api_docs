@@ -41,6 +41,10 @@ export default [
                     --}
                 -}
             }
+        `,
+        headers: `
+        *Request Headers*
+            -authToken: "bearer_token" !
         `
     }
 ]

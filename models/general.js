@@ -20,6 +20,10 @@ export default [
         `,
         response: `
             {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "bearer_token" !
         `
     },
     {
@@ -48,6 +52,10 @@ export default [
         `,
         response: `
             {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "bearer_token" !
         `
     },
     {
@@ -85,6 +93,10 @@ export default [
         `,
         response: `
             {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "bearer_token" !
         `
     }
 ]

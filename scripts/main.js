@@ -19,12 +19,15 @@ function appendEndpointData(endpointData) {
             detail.innerHTML = alterdHtml
 
             // chnage request/response entry color
-            for (let entry of entries) {
-                const styledEntry = detail.innerHTML.replace(
-                    entry,
-                    `<span style="color:white;">${entry}</span>`
-                )
-                detail.innerHTML = styledEntry
+            if (entries) {
+                for (let entry of entries) {
+                    entry = entry.replace(/-/g, '')
+                    const styledEntry = detail.innerHTML.replace(
+                        entry,
+                        `<span style="color:white;">${entry}</span>`
+                    )
+                    detail.innerHTML = styledEntry
+                }
             }
             // change text between stars(*text*)
             if (headerText) {
@@ -68,12 +71,16 @@ function createEndpointElement({
                 ">copy</button></span>
             </code>
             <div class="container">
-                <details class="request">
-                    <summary>Request Parameters</summary>
-                    <p>
-                        ${request}
-                    </p>
-                </details>
+                ${
+                    request
+                        ? `<details class="request">
+                                <summary>Request Parameters</summary>
+                                <p>
+                                    ${request}
+                                </p>
+                            </details>`
+                        : '<div style="margin-bottom: -15px"></div>'
+                }
                 <details class="response">
                     <summary>Response Body</summary>
                     <p>
@@ -124,25 +131,11 @@ function alterInnerText(detail) {
     let innerText = detail.children[1].innerText
 
     // match the object entries that are preceded by minus(-) and end by colons(:)
-    let entries = innerText.split(':').map((item) => item.replace(/\n/g, ''))
-    if (innerText.includes('token:') | innerText.includes('patient:')) {
-        entries = mapEntries(entries, 3)
-    } else if (innerText.includes('patients:')) {
-        entries = mapEntries(entries, 4)
-    } else {
-        entries = mapEntries(entries, 1)
-    }
+    let entries = innerText.match(RegExp(/-[\w\s]*?\:/, 'g'))
     // match text between starts(*someText*)
     let headerText = innerText.match(RegExp(/\*[\s\S]*?\*/, 'g'))
 
     return { entries, headerText }
-}
-
-function mapEntries(entries, index) {
-    return entries.map((item) => {
-        item = item.split('-')[index]
-        return item
-    })
 }
 
 export default appendEndpointData
