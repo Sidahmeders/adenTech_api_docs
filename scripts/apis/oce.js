@@ -1,4 +1,4 @@
 import appendEndpointData from '../main.js'
-import endpointData from '../../models/patients.js'
+import endpointData from '../../models/oce.js'
 
 appendEndpointData(endpointData)
