@@ -38,7 +38,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -antecedente_odf_duree: "string",
                 -antecedente_odf_type: "string",
                 -tics_habitude: "string"

@@ -7,7 +7,7 @@ export default [
             (
                 -patient_id: "string" !,
                 -tooth_number: "integer" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -histoire_maladie: "string",
                 -class_black: "integer" @< cl1, cl2, cl3, cl4, cl5 >,
                 -class_sit_sta: "string" @< sit_sta[1<1, 2, 3, 4>, 2<1, 2, 3, 4>, 3<1, 2, 3, 4>] >,
@@ -94,7 +94,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -etat_general_actuel: "string" !,
                 -date_traumatisme: "date" !,
                 -cause_tarumatiame: "string" !,

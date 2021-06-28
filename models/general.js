@@ -70,7 +70,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -mauvaise_habitude: "arrayList",
                 -fumeur_bruxisme_onychophagie: "arrayList" @< succion, digigtale, [anything] >
                 -AG_personnel_maladie: "arrayList" ! @< non, [anything] >,

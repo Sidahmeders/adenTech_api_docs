@@ -6,7 +6,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -kenedy_apelgate_maxillaire: "string",
                 -kenedy_apelgate_mandibule: "string",
                 -decision_therapeutique: "string"
@@ -27,7 +27,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -motif_consultation: "string" ! @< fonctionnele, esthetique, douleure, [anything] >,
+                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -linda_maxillaire: "string",
                 -linda_mandibule: "string",
                 -decision_therapeutique: "string"
