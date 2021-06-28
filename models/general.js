@@ -24,6 +24,8 @@ export default [
         headers: `
             *Request Headers*
                 -authToken: "bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     },
     {
@@ -47,7 +49,7 @@ export default [
                 -palpation_muscles_masseter: "string" @< isotonique, hypertrophique, douleure, [anything] >,
                 -palpation_muscles_temporal: "string" @< isotonique, hypertrophique, douleure, [anything] >,
                 -palpation_muscles_pterygoidien_interne: "string" @< isotonique, hypertrophique, douleure, [anything] >,
-                -palpation_muscles_pterygoidien_externe "string" @< isotonique, hypertrophique, douleure, [anything] >,
+                -palpation_muscles_pterygoidien_externe: "string" @< isotonique, hypertrophique, douleure, [anything] >,
             )      
         `,
         response: `
@@ -56,6 +58,8 @@ export default [
         headers: `
             *Request Headers*
                 -authToken: "bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     },
     {
@@ -97,6 +101,8 @@ export default [
         headers: `
             *Request Headers*
                 -authToken: "bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     }
 ]

@@ -161,7 +161,7 @@ svg {
 }
 
 .sections {
-    margin-top: 16%;
+    margin-top: 12%;
 }
 .section::selection {
     color: inherit;
@@ -215,4 +215,7 @@ svg {
 }
 .section:nth-child(8)::before {
     content: '🎩';
+}
+.section:nth-child(9)::before {
+    content: '❓';
 }
