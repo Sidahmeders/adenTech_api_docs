@@ -120,9 +120,40 @@ export default [
                 -langue_situation: "string" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >,
                 -langue_frien_linguale: "string",
                 -age_dentaire: "integer" @< court, physiologique >,
-                -satde_dentitin: "string" @< temporaire, ... >,
-                -chemin_fermeture: "string"
-            )        
+                -satde_dentitin: "string" @< temporaire_stable, temporaire_constitutionnelle, mixte_stable, mixte_constitutionnelle, 
+                    adolescente_stable, adolescente_constitutionnele, adulte_jeune_stable, adulte_jeune_constitutionnelle,
+                    adulte_complete_stable, adulte_complete_constitutionnelle >
+                -chemin_fermeture: "string"< devie_gauche, devie_droite >
+            )
+        `,
+        response: `
+            {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
+    },
+    {
+        title: 'exobuccal collection',
+        method: 'POST',
+        route: '/odf/exobuccal',
+        request: `
+            (
+                -patient_id: "string" <required>,
+                -symetrie_faciale: "string",
+                -parallelisme_trois_ligne: "string",
+                -typologie_facial: "string",
+                -profile_izard: "string",
+                -profile_ricketts: "string",
+                -muscilature_joues: "string",
+                -muscilature_levres_repos: "string",
+                -muscilature_levres_fonction: "string",
+                -sillons_slm: "string",
+                -sillons_sng: "string"
+            )
         `,
         response: `
             {}
