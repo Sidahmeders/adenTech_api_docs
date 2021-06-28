@@ -187,9 +187,9 @@ export default [
         `
     },
     {
-        title: 'examenOcclusion collection',
+        title: 'examenOcclusionStatic collection',
         method: 'POST',
-        route: '/odf/examenOcclusion',
+        route: '/odf/examenOcclusionStatic',
         request: `
             (
                 -incisive_sagital:"string" @< >
