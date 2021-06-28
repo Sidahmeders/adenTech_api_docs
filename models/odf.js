@@ -81,7 +81,7 @@ export default [
         response: `
             {}
         `,
-        headres: `
+        headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
@@ -108,7 +108,7 @@ export default [
         response: `
             {}
         `,
-        headres: `
+        headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
@@ -144,7 +144,6 @@ export default [
                 -papport_dento_squellettes_6ptv: "integer",
                 -rapport_dento_squelletique_if: "integer",
                 -rapport_dento_squellettes_im: "integer",
-                -rapport_dento_squellettes_ia_po_angle: "integer",
                 -rapport_dento_squellettes_ia_oo_distance: "integer",
                 -rapport_dento_squellettes_ia_po_angle: "integer",
                 -rapport_dento_squellettes_ia_po_distance: "integer",
@@ -154,7 +153,7 @@ export default [
                 -esthetique_angle_z: "integer"
             )        
         `,
-        headres: `
+        headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
