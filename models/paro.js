@@ -185,5 +185,38 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `
+    },
+    {
+        title: 'examenOcclusion collection',
+        method: 'POST',
+        route: '/odf/examenOcclusion',
+        request: `
+            (
+                -incisive_sagital:"string" @< >
+                -incisive_transversal:"string" @< >
+                -incisive_vertical:"string" @< >
+                -canine_droite_sagital:"string" @< cl1, cl2 ,cl3 >
+                -canine_droite_vertical:"string" @< >
+                -canine_droite_transversal:"string" @< >
+                -canine_gauche_sagital:"string" @< cl1, cl2, cl3 >
+                -canine_gauche_vertical:"string" @< >
+                -canine_gauche_transversal:"string" @< >
+                -molaire_gauche_sagital:"string" @< cl1, cl2, cl3 >
+                -molaire_gauche_vertical:"string" @< >
+                -molaire_gauche_transversal:"string" @< >
+                -molaire_droite_sagital:"string" @< >
+                -molaire_droite_transversal:"string" @< >
+                -molaire_droite_verticale:"string" @<  >
+            )
+        `,
+        response: `
+            {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     }
 ]
