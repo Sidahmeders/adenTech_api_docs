@@ -42,7 +42,7 @@ export default [
                 -sign_objective_percussion_axial: "string" @< postive, negtive >,
                 -sign_objective_percussion_lateral: "string" @< postive, negtive >,
                 -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >,
-                -sign_objective_mobilite: "string" @< postive, negtive >,
+                -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >,
                 -radio_panoramique: "string",
                 -radio_retroslviolsire_couronne: "string",
                 -radio_retroslviolsire_racine: "string"

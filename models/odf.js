@@ -159,5 +159,28 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `
+    },
+    {
+        title: 'examenFonction collections',
+        method: 'POST',
+        route: '/odf/examenFonction',
+        request: `
+            (
+                -patient_id: "string" !,
+                -ventilation: 'string',
+                -daeglutition: 'string',
+                -mastication: 'string',
+                -phonation: 'string'
+            )
+        `,
+        response: `
+            {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     }
 ]
