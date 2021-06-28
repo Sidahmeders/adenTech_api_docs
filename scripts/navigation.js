@@ -31,6 +31,9 @@ const navigation = `
         <a class="section" href="/pages/error.html">
             status & error codes
         </a>
+        <a class="section" href="/pages/admin.html">
+            admin endpoints
+        </a>
     </div>
     </sidebar>
 

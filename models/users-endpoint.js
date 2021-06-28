@@ -123,6 +123,8 @@ export default [
         headers: `
             *Request Headers*
                 -authToken: "bearer_token" !
+                -accept: "application/json"
+            -contentType: "application/json"
         `
     },
     {
@@ -150,6 +152,8 @@ export default [
         headers: `
         *Request Headers*
             -authToken: "bearer_token" !
+            -accept: "application/json"
+            -contentType: "application/json"
         `
     },
     {
@@ -174,6 +178,8 @@ export default [
         headers: `
         *Request Headers*
             -authToken: "bearer_token" !
+            -accept: "application/json"
+            -contentType: "application/json"
         `
     }
 ]
