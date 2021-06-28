@@ -126,7 +126,7 @@ function alterInnerHtml(innerHTML) {
         `<span style="color:orange;">${whiteSpace(1)}&ltrequired&gt</span>`
     )
     innerHTML = innerHTML.replace(/@/g, '<span style="color:#6dd">[options]</span>')
-    innerHTML = innerHTML.replace(/-/g, whiteSpace(8))
+    innerHTML = innerHTML.replace(/-/g, whiteSpace(4))
 
     return innerHTML
 }

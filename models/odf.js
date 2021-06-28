@@ -6,20 +6,20 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -maxillaire_forme: "string",
-                -maxillaire_symetrie: "string",
-                -maxillaire_profondeur_voute: "string",
-                -maxillaire_malposition: "string",
-                -maxillaire_ddm: "integer",
-                -maxillaire_indice_ponte_D4G4: "integer",
-                -maxillaire_indice_ponte_D6G6: "integer",
-                -maxillaire_indice_doumange: "integer",
-                -mandubule_forme: "string",
-                -mandubule_symetrie: "string",
-                -mandubule_malposition: "string",
-                -mandubule_indice_pont_D4G4: "integer",
-                -mandubule_indice_pont_D6G6: "integer"
-            )        
+                -maxillaire_forme: "string" @< u, v, ogivale >,
+                -maxillaire_symetrie: "string" @< conserve, non, conserve >,
+                -maxillaire_profondeur_voute: "string" @< profonde, moyenene, plate >,
+                -maxillaire_malposition: "string" @< maxi_teeth_number, maxi_teeth_malposition >,
+                -maxillaire_ddm: "integer" @< range between [~20, ..., +20] >,
+                -maxillaire_indice_ponte_d4g4: "string" @< maxilaire_large, maxilaire_moyenne, maxilaire_etroite >,
+                -maxillaire_indice_ponte_d6g6: "string" @< maxilaire_large, maxilaire_moyenne, maxilaire_etroite >,
+                -maxillaire_indice_doumange: "string" @< ogivale, haute, basse >,
+                -mandubule_forme: "string" @< v, u >,
+                -mandubule_symetrie: "string" @< conserve, non_conserve >,
+                -mandubule_malposition: "string" @< mand_teeth_number, mand_teeth_malposition >,
+                -mandubule_indice_pont_d4g4: "string" @< mandibule_large, mandibule_moyenne, mandibule_etroite >,
+                -mandubule_indice_pont_d6g6: "string" @< mandibule_large, mandibule_moyenne, mandibule_etroite >
+            )
         `,
         response: `
             {}
@@ -29,6 +29,17 @@ export default [
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
+        `,
+        specification: `
+            *maxillaire_malposition*
+                -maxi_teeth_number: @< 11, 12, ..., 47, 48 >
+                -maxi_teeth_malposition: @< ectopique, rotation, axiale, marginale, version_vestibulaire, 
+                    version_palatin, verion_mesiale, version_distale,[anything] >
+            
+            *mandubule_malposition*
+                -mand_teeth_number: @< 11, 12, ..., 47, 48 >
+                -mand_teeth_malposition: @< ectopique, rotation_axiale, marginale, version_vestibulaire, 
+                    version_palatin, verion_mesiale, version_distale, [anything] >
         `
     },
     {
@@ -41,7 +52,7 @@ export default [
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
                 -antecedente_odf_duree: "string",
                 -antecedente_odf_type: "string",
-                -tics_habitude: "string"
+                -tics_habitude: "arrayList" @< oui, no >
             )
         `,
         response: `
@@ -52,6 +63,10 @@ export default [
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
+        `,
+        specification: `
+            *tics_habitude*
+                -oui: @< succion_digitale, succion_levre_inferieure, mordillment_levre, bruxisme, onychophagie, [anything] >
         `
     },
     {
@@ -61,14 +76,18 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -dp_class_squelettique: "string" ! @< cl1, cl2, cl3 >,
-                -dp_forme_clinique: "string" !,
+                -dp_class_squelettique: "string" ! @< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard >,
+                -dp_forme_clinique: "arrayList" ! @< endoalveolie, exoalveolie, endognathie, exognathie, latero_gnathie, infraalviole_anterieure,
+                    infraalveolie posterieur, supraalveolie, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, 
+                    brachy_maxilie, dolicho_mandibulie, brachy_mandibulie, [anything] >,
                 -dp_typologie_faciale: "string" ! @< open_bite, normo_bite, deep_bite >,
                 -dp_direction_croissance_faciale: "string" ! @< anterieur, posterieur, moyenne >,
                 -dp_direction_croissance_mandibulaire: "string" ! @< anterieur, posterieur, moyenne >,
-                -dp_anomalies_associees: "string" !,
-                -diagnostic_etiologique: "string" !,
-                -diagnostic_differentiel: "string" !,
+                -dp_anomalies_associees: "arrayList" ! @< endoalveolie, exoalveolie, endognathie, exognathie, latero_gnathie, infraalviole_anterieure, 
+                    infraalveolie_posterieur, supraalveolie, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie ,
+                    brachy_maxilie, dolicho_mandibulie_brachy_mandibulie, proglissement_mandibulaire, latero_deviation, [anything] >,
+                -diagnostic_etiologique: "arrayList" ! @< heriditaire, foctionnelle, [anything] >,
+                -diagnostic_differentiel: "arrayList" !,
                 -plan_trt_objective_squeletique: "string" !,
                 -plan_trt_objective_fonctionnels: "string" !,
                 -plan_trt_objective_occlusaux: "string" !,
@@ -97,11 +116,11 @@ export default [
                 -patient_id: "string" !,
                 -hygien_bucaux_dentaire: "string" ! @< mauvais, moyenne, bon >,
                 -probleme_paro: "string" @< oui, no >,
-                -langue_volume: "string",
-                -langue_situation: "string",
+                -langue_volume: "string" @< macroglossie, microglossie, normoglossie >,
+                -langue_situation: "string" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >,
                 -langue_frien_linguale: "string",
-                -age_dentaire: "integer",
-                -satde_dentitin: "string",
+                -age_dentaire: "integer" @< court, physiologique >,
+                -satde_dentitin: "string" @< temporaire, ... >,
                 -chemin_fermeture: "string"
             )        
         `,
