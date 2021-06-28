@@ -3,7 +3,10 @@ import './darkmode.js'
 
 function appendEndpointData(endpointData) {
     const mainElement = document.getElementsByTagName('main')[0]
-    const endpoints = endpointData.map((item) => createEndpointElement(item))
+    const endpoints = endpointData.map((item, index) => {
+        item.index = index
+        return createEndpointElement(item)
+    })
 
     mainElement.innerHTML = endpoints
 
@@ -52,6 +55,7 @@ function appendEndpointData(endpointData) {
 
 function createEndpointElement({
     title,
+    index,
     method,
     route,
     request,
@@ -61,7 +65,7 @@ function createEndpointElement({
 }) {
     return `
         <div class="endpoint">
-            <h2>${title}</h2>
+            <h2> <span style="color:blue;">${index + 1}</span> ${title}</h2>
             <code>
                 ${method}<span>${route}<button onclick="
                 (function (node) {
