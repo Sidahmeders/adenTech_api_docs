@@ -47,6 +47,10 @@ export default [
             -authToken: "HS256_bearer_token" !
             -accept: "application/json"
             -contentType: "application/json"
+        `,
+        specification: `
+            *specialty_access*
+                xxxxxxxxxxxxxxxxxx
         `
     }
 ]
