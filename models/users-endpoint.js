@@ -32,6 +32,10 @@ export default [
                     --}
                 -}
             }
+        `,
+        headers: `
+            *Response Headers*
+                -authToken: "bearer_token" 
         `
     },
     {
@@ -80,6 +84,13 @@ export default [
                 -}
             }
         `,
+        headers: `
+            *Request Headers*
+                -accept: "application/json, multipart/form data"
+                -contentType: "multipart/form data"
+            *Response Headers*
+                -authToken: "bearer_token" 
+        `,
         specification: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
@@ -124,7 +135,7 @@ export default [
             *Request Headers*
                 -authToken: "bearer_token" !
                 -accept: "application/json"
-            -contentType: "application/json"
+                -contentType: "application/json"
         `
     },
     {
