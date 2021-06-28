@@ -35,7 +35,7 @@ export default [
         `,
         headers: `
             *Response Headers*
-                -authToken: "bearer_token" 
+                -authToken: "HS256_bearer_token" 
         `
     },
     {
@@ -88,8 +88,9 @@ export default [
             *Request Headers*
                 -accept: "application/json, multipart/form data"
                 -contentType: "multipart/form data"
+                
             *Response Headers*
-                -authToken: "bearer_token" 
+                -authToken: "HS256_bearer_token"
         `,
         specification: `
             *role*
@@ -133,7 +134,7 @@ export default [
         `,
         headers: `
             *Request Headers*
-                -authToken: "bearer_token" !
+                -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
         `
@@ -162,7 +163,7 @@ export default [
         `,
         headers: `
         *Request Headers*
-            -authToken: "bearer_token" !
+            -authToken: "HS256_bearer_token" !
             -accept: "application/json"
             -contentType: "application/json"
         `
@@ -188,7 +189,7 @@ export default [
         `,
         headers: `
         *Request Headers*
-            -authToken: "bearer_token" !
+            -authToken: "HS256_bearer_token" !
             -accept: "application/json"
             -contentType: "application/json"
         `
