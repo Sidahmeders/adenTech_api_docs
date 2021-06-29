@@ -50,9 +50,9 @@ table-2:
 
 function grabMaximumDistinctGifts(giftsTable) {
     let tableLength = giftsTable.length,
-        smallestNumberOfVisit,
         memoGifts = {},
-        smallestIndex = +Infinity
+        smallestIndex = +Infinity,
+        smallestNumberOfVisit
 
     for (let i = 0; i < tableLength; i++) {
         const gift = giftsTable[i]
