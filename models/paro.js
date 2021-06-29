@@ -6,19 +6,19 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -sector_gingival: "string",
-                -contour: "string",
-                -couleur: "string",
-                -volume: "string",
-                -aspect: "string",
-                -consistance: "string",
-                -hga: "integer",
-                -pma: "integer",
-                -pi: "integer",
-                -gi: "integer",
-                -sbi: "integer",
+                -sector_gingival: "string" @< sup_ant, sup_g, sup_d, inf_ant, inf_d , inf_g >,
+                -contour: "arrayList" @< regulier, irregulier >,
+                -couleur: "arrayList" @< rose_coraille, rose_pale, rouge_claire, rouge_bleute, rouge_fonce, tache_milanine > ,
+                -volume: "string" @< moyenne, augmente, tres_augmente >,
+                -aspect: "string" @< lisse_brillante, piquete_peau_orange >,
+                -consistance: "string" @< ferme, molle, adherente >,
+                -hga: "string" @< suffisante, insuffisante >,
+                -pma: "integer" @< 0, 1, 2, 3 >,
+                -pi: "integer" @< 0, 1, 2, 3 >,
+                -gi: "integer" @< 0, 1, 2, 3 >,
+                -sbi: "integer" @< 0, 1, 2, 3, 4, 5 >,
                 -cote_l: "string"
-            )        
+            )
         `,
         response: ``,
         headers: `
@@ -26,6 +26,10 @@ export default [
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
+        `,
+        specification: `
+            *contour*
+                -irregulier: @< malposition, augmentation_hauteur, recession, fisure_stillman, bourellet_maccall, [anything] >
         `
     },
     {
@@ -61,29 +65,29 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -insertion_frien_sup: "string",
-                -insertion_frien_inf: "string",
-                -insertion_frien_lingual: "string",
-                -insertion_frien_autres: "string",
-                -atteints_furcation_1: "string",
-                -atteints_furcation_2: "string",
-                -atteints_furcation_3: "string",
-                -atteints_furcation_4: "string",
-                -indice_abrasion_1: "string",
-                -indice_abrasion_2: "string",
-                -indice_abrasion_3: "string",
-                -indice_abrasion_4: "string",
-                -indice_abrasion_5: "string",
-                -indice_mobilite_1: "string",
-                -indice_mobilite_2: "string",
-                -indice_mobilite_3: "string",
-                -indice_mobilite_4: "string",
-                -indice_recession_1: "string",
-                -indice_recession_2: "string",
-                -indice_recession_3: "string",
-                -indice_recession_4: "string",
-                -biotype_parodontal: "string"
-            )        
+                -insertion_frien_sup: "string" @< cl1, cl2, cl3, cl4 >,
+                -insertion_frien_inf: "string" @< cl1, cl2, cl3, cl4 >,,
+                -insertion_frien_lingual: "string" @< pathologique, physiologique >,
+                -insertion_frien_autres: "string" @< pathologique, physiologique >,
+                -atteints_furcation_1: "arrayList" @< teeth_number >,
+                -atteints_furcation_2: "arrayList" @< teeth_number >,
+                -atteints_furcation_3: "arrayList" @< teeth_number >,
+                -atteints_furcation_4: "arrayList" @< teeth_number >,
+                -indice_abrasion_1: "arrayList" @< teeth_number >,
+                -indice_abrasion_2: "arrayList" @< teeth_number >,
+                -indice_abrasion_3: "arrayList" @< teeth_number >,
+                -indice_abrasion_4: "arrayList" @< teeth_number >,
+                -indice_abrasion_5: "arrayList" @< teeth_number >,
+                -indice_mobilite_1: "arrayList" @< teeth_number >,
+                -indice_mobilite_2: "arrayList" @< teeth_number >,
+                -indice_mobilite_3: "arrayList" @< teeth_number >,
+                -indice_mobilite_4: "arrayList" @< teeth_number >,
+                -indice_recession_1: "arrayList" @< teeth_number >,
+                -indice_recession_2: "arrayList" @< teeth_number >,
+                -indice_recession_3: "arrayList" @< teeth_number >,
+                -indice_recession_4: "arrayList" @< teeth_number >,
+                -biotype_parodontal: "string" @< cl1, cl2, cl3, cl4 >
+            )
         `,
         response: ``,
         headers: `
