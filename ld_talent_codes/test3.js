@@ -38,3 +38,45 @@ In this example, the answer is 6 starting from A[2] through A[7].
 Write a function which takes an input array of N items and returns the smallest number 
 of tables that you would visit in sequence to grab the most number of distinct gifts.
 */
+
+/*
+table-1:
+        1        2        3        4        5        6        7        8
+    ["Gift1", "Gift3", "Gift1", "Gift2", "Gift1", "Gift4", "Gift3", "Gift1"] => 4
+table-2:
+        1        2        3        4        5        6        7        8
+    ["Gift3", "Gift5", "Gift3", "Gift2", "Gift1", "Gift3", "Gift4", "Gift2"] => 6
+*/
+
+function grabMaximumDistinctGifts(giftsTable) {
+    let tableLength = giftsTable.length,
+        smallestNumberOfVisit,
+        memoGifts = {},
+        smallestIndex = +Infinity
+
+    for (let i = 0; i < tableLength; i++) {
+        const gift = giftsTable[i]
+        memoGifts[gift] = i
+    }
+
+    for (let item in memoGifts) {
+        let giftIndex = memoGifts[item]
+        if (giftIndex < smallestIndex) {
+            smallestIndex = giftIndex
+        }
+    }
+
+    smallestNumberOfVisit = tableLength - (smallestIndex + 1)
+
+    return smallestNumberOfVisit
+}
+
+let testTables = [
+    ['Gift1', 'Gift3', 'Gift1', 'Gift2', 'Gift1', 'Gift4', 'Gift3', 'Gift1'],
+    ['Gift3', 'Gift5', 'Gift3', 'Gift2', 'Gift1', 'Gift3', 'Gift4', 'Gift2']
+]
+
+testTables.forEach((table, index) => {
+    const testResult = grabMaximumDistinctGifts(table)
+    console.log(`test case number ${index + 1}:`, testResult)
+})

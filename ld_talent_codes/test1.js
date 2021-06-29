@@ -12,7 +12,7 @@ In List2, there are 2 modes i.e., 50 and -100 both of which occur 3 times.
 Write a function that takes a list A as input argument and returns a list of mode values.
 */
 
-function getTheModeValues(listA = []) {
+function getTheModeValues(listA) {
     let result = [],
         maxValue = -Infinity,
         modesMapList = {}
@@ -62,6 +62,6 @@ let testSamples = [
 ]
 
 testSamples.forEach((test, index) => {
-    let testResult = getTheModeValues(test)
+    const testResult = getTheModeValues(test)
     console.log(`test case number ${index + 1}:`, testResult)
 })
