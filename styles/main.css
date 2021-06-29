@@ -12,7 +12,8 @@ h1 {
 .endpoint {
     width: 75vw;
     margin: 0 2vw;
-    box-shadow: 0 0 30px #cdd1da99;
+    box-shadow: 0 0 20px #6662;
+    border: 2px solid #ddd2;
     padding: 20px 40px;
     border-radius: 20px;
 }

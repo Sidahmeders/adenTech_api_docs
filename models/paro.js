@@ -242,5 +242,38 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `
+    },
+    {
+        title: 'ineterprationRadiologic collection',
+        method: 'POST',
+        route: '/odf/ineterprationRadiologic',
+        request: `
+            (
+                -bases_osseuses: "string",
+                -sinus_maxilllaires: "string",
+                -articulation_temporo_mandibulaire: "string",
+                -fosses_nasales: "string",
+                -germes: "string",
+                -etat_couronnes: "string",
+                -etat_racines: "string",
+                -edification_racines_complete: "string",
+                -edification_racines_terminal: "string",
+                -medification_racines_moyenne: "string",
+                -edification_racines_debutante: "string",
+                -rhizalyse_debutante: "string",
+                -rhizalyse_moyenne: "string",
+                -rhizalyse_terminal: "string",
+                -signe_DDM: "string"
+            )
+        `,
+        response: `
+            {}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     }
 ]
