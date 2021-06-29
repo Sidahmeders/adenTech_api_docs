@@ -76,6 +76,11 @@ let testTables = [
     ['Gift3', 'Gift5', 'Gift3', 'Gift2', 'Gift1', 'Gift3', 'Gift4', 'Gift2']
 ]
 
+/*
+  Time_Complexity: O(2n),
+  Space_Complexity: O(n)
+*/
+
 testTables.forEach((table, index) => {
     const testResult = grabMaximumDistinctGifts(table)
     console.log(`test case number ${index + 1}:`, testResult)
