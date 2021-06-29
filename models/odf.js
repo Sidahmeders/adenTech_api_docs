@@ -21,9 +21,7 @@ export default [
                 -mandubule_indice_pont_d6g6: "string" @< mandibule_large, mandibule_moyenne, mandibule_etroite >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -55,9 +53,7 @@ export default [
                 -tics_habitude: "arrayList" @< oui, no >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -97,9 +93,7 @@ export default [
                 -plan_trt_pronostic: "string" !
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -126,9 +120,7 @@ export default [
                 -chemin_fermeture: "string"< devie_gauche, devie_droite >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -155,9 +147,7 @@ export default [
                 -sillons_sng: "string"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -223,9 +213,7 @@ export default [
                 -phonation: 'string'
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -256,9 +244,7 @@ export default [
                 -molaire_droite_verticale:"string" @<  >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -289,9 +275,7 @@ export default [
                 -signe_DDM: "string"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !

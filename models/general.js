@@ -19,9 +19,7 @@ export default [
                 -etat_muqueuses_autres_lesion: "arrayList",
             )   
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -53,9 +51,7 @@ export default [
                 -palpation_muscles_pterygoidien_externe: "string" @< isotonique, hypertrophique, douleure, [anything] >,
             )      
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -97,9 +93,7 @@ export default [
                 -AS_autres: "arrayList"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !

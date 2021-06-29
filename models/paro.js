@@ -20,9 +20,7 @@ export default [
                 -cote_l: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -48,9 +46,7 @@ export default [
                 -tooth_number: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -89,9 +85,7 @@ export default [
                 -biotype_parodontal: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -124,9 +118,7 @@ export default [
                 -trabeculation_osseuses_mand: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -153,9 +145,7 @@ export default [
                 -pronostic_unitaire: "string"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -176,9 +166,7 @@ export default [
                 -phonation: 'string'
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -209,9 +197,7 @@ export default [
                 -molaire_droite_verticale:"string" @<  >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -233,9 +219,7 @@ export default [
                 -lateralite_gauche_non_travaillaint: "string" @< desocclusion, interference >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -266,9 +250,7 @@ export default [
                 -signe_DDM: "string"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !

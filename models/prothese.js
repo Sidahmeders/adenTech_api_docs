@@ -33,9 +33,7 @@ export default [
                 -decision_therapeutique: "string"
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -66,9 +64,7 @@ export default [
                 -molaire_droite_verticale:"string" @<  >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -90,9 +86,7 @@ export default [
                 -lateralite_gauche_non_travaillaint: "string" @< desocclusion, interference >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !

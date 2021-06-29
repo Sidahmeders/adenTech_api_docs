@@ -17,9 +17,7 @@ export default [
                 -decision_therapeutique: "string" ! @< dentinogene, cementogene, osteocementogene >
             )
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -48,9 +46,7 @@ export default [
                 -radio_retroslviolsire_racine: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -77,9 +73,7 @@ export default [
                 -pronostic: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -106,9 +100,7 @@ export default [
                 -pronostic: "string"
             )        
         `,
-        response: `
-            {}
-        `,
+        response: ``,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
