@@ -253,9 +253,9 @@ export default [
         `
     },
     {
-        title: 'ineterprationRadiologic collection',
+        title: 'ineterprationRadiologicParo collection',
         method: 'POST',
-        route: '/odf/ineterprationRadiologic',
+        route: '/odf/ineterprationRadiologicParo',
         request: `
             (
                 -bases_osseuses: "string",

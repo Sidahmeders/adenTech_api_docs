@@ -98,29 +98,29 @@ export default [
         `
     },
     {
-        title: 'interpretationRadiologic collection',
+        title: 'interpretationRadiologicParo collection',
         method: 'POST',
-        route: '/paro/interpretationRadiologic',
+        route: '/paro/interpretationRadiologicParo',
         request: `
             (
                 -patient_id: "string" !,
                 -desmodente: "string",
                 -lamina_dura: "string",
-                -lyse_profondeur_superficielle: "string",
-                -lyse_profondeur_profonde: "string",
-                -lyse_profondeur_terminal: "string",
-                -lyse_forme_horizontal: "string",
-                -lyse_forme_vertical: "string",
-                -rapport_cr_legerement_augmente: "string",
-                -rapport_cr_augmente: "string",
-                -rapport_cr_tres_augmente: "string",
+                -lyse_profondeur_superficielle: "string" @< teeth_number >,
+                -lyse_profondeur_profonde: "string" @< teeth_number >,
+                -lyse_profondeur_terminal: "string" @< teeth_number >,
+                -lyse_forme_horizontal: "string" @< teeth_number >,
+                -lyse_forme_vertical: "string" @< teeth_number >,
+                -rapport_cr_legerement_augmente: "string" @< teeth_number >,
+                -rapport_cr_augmente: "string" @< teeth_number >,
+                -rapport_cr_tres_augmente: "string" @< teeth_number >,
                 -rapport_dentodentaire: "string",
                 -malposition_dentaire: "string",
-                -megration_d_premaire: "string",
-                -megration_d_secondaire: "string",
-                -trabeculation_osseuses_max: "string",
-                -trabeculation_osseuses_mand: "string"
-            )        
+                -megration_d_premaire: "string" @< teeth_number >,
+                -megration_d_secondaire: "string" @< teeth_number >,
+                -trabeculation_osseuses_max: "string" @< lache, dense >,
+                -trabeculation_osseuses_mand: "string" @< lache, dense >
+            )
         `,
         response: ``,
         headers: `
@@ -137,16 +137,21 @@ export default [
         request: `
             (
                 -patient_id: "string" !,
-                -diagnostic_etiologique: "string",
-                -diagnostic_positive: "string",
-                -diagnostic_deffirentiel: "string",
-                -traitement_urgence: "string",
-                -traitement_initial: "string",
-                -revaluation: "string",
-                -traitement_correctif: "string",
-                -maintenance: "string",
-                -pronostic_global: "string",
-                -pronostic_unitaire: "string"
+                -diagnostic_etiologique_directe_declenchant: "string" @< plaque_dentaire, non >,
+                -diagnostic_positive_directe_favorisant: "arrayList" @< prothese_mal_adapte, traitement_odf,
+                    respiration_buccale, obturation_debordante, tartre, carie_cervicale, 
+                    dent_abscente, diasteme, recession, mastication_unilaterale, [anything] >,
+                -diagnostic_etiologique_indirecte: "arrayList" @< prematurite, interfirence, trauma_occlusale_primaire, 
+                    trauma_occlusale_secondaire, traitement_odf, prothese_mal_adapte, bruxisme, crispation, succion_de_pouce,
+                    onychophagie, mastication_unilaterale, obturation_debordante_occlusale, [anything] >,
+                -diagnostic_differentiel: "arrayList"< classification_armitage_tout >,
+                -traitement_urgence: "arrayList" @< classification_armitage_tout >,
+                -traitement_initial: "string" @< detartrage, surfasage, motivation_HBD >,
+                -revaluation: "arrayList",
+                -traitement_correctif: "arrayList",
+                -maintenance: "arrayList",
+                -pronostic_global: "arrayList",
+                -pronostic_unitaire: "arrayList"
             )
         `,
         response: ``,
@@ -232,9 +237,9 @@ export default [
         `
     },
     {
-        title: 'ineterprationRadiologic collection',
+        title: 'interpretationRadiologic_Odf_Paro collection',
         method: 'POST',
-        route: '/odf/ineterprationRadiologic',
+        route: '/odf/interpretationRadiologic_Odf_Paro',
         request: `
             (
                 -bases_osseuses: "string",
