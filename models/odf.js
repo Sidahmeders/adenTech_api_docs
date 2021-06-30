@@ -83,14 +83,21 @@ export default [
                     infraalveolie_posterieur, supraalveolie, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie ,
                     brachy_maxilie, dolicho_mandibulie_brachy_mandibulie, proglissement_mandibulaire, latero_deviation, [anything] >,
                 -diagnostic_etiologique: "arrayList" ! @< heriditaire, foctionnelle, [anything] >,
+                -anomalies_basale_vertical: "arrayList" @< >,
+                -anomalies_basale_transversal: "arrayList" @< >,
+                -anomalies_alviolaire_vertical: "arrayList" @< >
+                -anomalies_alviolaire_transversal: "arrayList" @< >,
+                -anomalies_alviolaire_antero_posterieure: "arrayList" @< >,
+                -anomalies_dentaires: "arrayList" @< >,
                 -diagnostic_differentiel: "arrayList" !,
-                -plan_trt_objective_squeletique: "string" !,
-                -plan_trt_objective_fonctionnels: "string" !,
-                -plan_trt_objective_occlusaux: "string" !,
-                -plan_trt_objective_esthetiques: "string" !,
-                -plan_trt_principes_moyens: "string" !,
-                -plan_trt_contension : "string" !,
-                -plan_trt_pronostic: "string" !
+                -plan_trt_objective_squeletique: "arrayList" !,
+                -plan_trt_objective_fonctionnels: "arrayList" !,
+                -plan_trt_objective_occlusaux: "arrayList" !,
+                -plan_trt_objective_esthetiques: "arrayList" !,
+                -plan_trt_contension : "arrayList" !,
+                -plan_trt_pronostic: "arrayList" !,
+                -plan_trt_principes_dente_extraire: "arrayList" !,
+                -temps_traitement: "arrayList" ! @< 1er_temps, 2em_temps, ..., 29em_temps, 30em_temps >
             )        
         `,
         response: ``,
@@ -99,6 +106,10 @@ export default [
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
+        `,
+        specification: `
+            *temps_traitement*
+                -1er_temps 2em_temps ___ 29_temps 30em_temps: @< >
         `
     },
     {
