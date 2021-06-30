@@ -24,7 +24,7 @@ export default [
         `
     },
     {
-        title: 'maladie_risque_diabete collection',
+        title: 'maladieRisque diabete collection',
         method: 'POST',
         route: '/pcb/maladieRisque/diabete',
         request: `
