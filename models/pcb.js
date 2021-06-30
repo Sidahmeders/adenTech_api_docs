@@ -1,12 +1,11 @@
 export default [
     {
-        title: 'maladie_risque_cardiopathie collection',
+        title: 'maladieRisque cardiopathie collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/cardiopathie',
+        route: '/pcb/maladieRisque/cardiopathie',
         request: `
             -type_cardiopathie: "string" @< >,
             -pathologie_associe: "string" @< >,
-            -risque_endocardite: "string" @< >,
             -risque_endocardite: "string" @< >,
             -traitement_anticoagulante: "string" @< >,
             -traitement_cours: "string" @< >,
@@ -15,14 +14,19 @@ export default [
             -decision_therapeutique: "string" @< >,
             -protocole_antibiothique: "string" @< >,
             -observation_particulieres: "string" @< >,
-     
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     },
     {
         title: 'maladie_risque_diabete collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/diabete',
+        route: '/pcb/maladieRisque/diabete',
         request: `
             -type_diabete: "string" @< type1, type2 >,
             -pathologie_associe: "string" @< >,
@@ -35,14 +39,19 @@ export default [
             -equilibre_diabete: "string" @< >,
             -protocole_antibiothique: "string" @< >,
             -observation_particulieres: "string" @< >,
-            
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     },
     {
-        title: 'maladie_risque_bisphosphonates collection',
+        title: 'maladieRisque bisphosphonates collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/bisphosphonates',
+        route: '/pcb/maladieRisque/bisphosphonates',
         request: `
             -diagnostique_maladie : "string" @< type1, type2 >,
             -pathologie_associe: "string" @< >,
@@ -57,15 +66,19 @@ export default [
             -decision_therapeutique: "string" @< >,
             -protocole_antibiothique: "string" @< >,
             -observation_particulieres: "string" @< >,
-        
-            
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     },
     {
-        title: 'maladie_risque_hemopathie collection',
+        title: 'maladieRisque hemopathie collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/hemopathie',
+        route: '/pcb/maladieRisque/hemopathie',
         request: `
             -diagnostique_maladie: "string" @< type1, type2 >,
             -pathologie_associe: "string" @< >,
@@ -79,14 +92,19 @@ export default [
             -adjoction_facteure_manquant : "string" @< >
             -protocole_antibiothique: "string" @< >,
             -observation_particulieres: "string" @< >,
-
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     },
     {
-        title: 'maladie_risque_irradie collection',
+        title: 'maladieRisque irradie collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/irradie',
+        route: '/pcb/maladieRisque/irradie',
         request: `
             -diagnostique_maladie : "string" @< type1, type2 >,
             -pathologie_associe: "string" @< >,
@@ -101,12 +119,18 @@ export default [
             -protocole_antibiothique: "string" @< >,
             -observation_particulieres: "string" @< >,
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     },
     {
-        title: 'maladie_risque_accident cellulaire collection',
+        title: 'maladieRisque accidentCellulaire collection',
         method: 'POST',
-        route: '/pcb/maladie_risque/accident cellulaire',
+        route: '/pcb/maladieRisque/accidentCellulaire',
         request: `
             -date_appraition : "string" @< type1, type2 >,
             -pathologie_associe: "string" @< >,
@@ -117,6 +141,12 @@ export default [
             -protocole_antibiothique: "string" @< >,
             observation_particulieres: "string" @< >,
         `,
-        response: ``
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     }
 ]
