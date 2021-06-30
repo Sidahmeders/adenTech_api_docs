@@ -68,7 +68,7 @@ export default [
                 -insertion_frien_sup: "string" @< cl1, cl2, cl3, cl4 >,
                 -insertion_frien_inf: "string" @< cl1, cl2, cl3, cl4 >,,
                 -insertion_frien_lingual: "string" @< pathologique, physiologique >,
-                -insertion_frien_autres: "string" @< pathologique, physiologique >,
+                -insertion_frien_autres: "string",
                 -atteints_furcation_1: "arrayList" @< teeth_number >,
                 -atteints_furcation_2: "arrayList" @< teeth_number >,
                 -atteints_furcation_3: "arrayList" @< teeth_number >,
@@ -138,14 +138,15 @@ export default [
             (
                 -patient_id: "string" !,
                 -diagnostic_etiologique_directe_declenchant: "string" @< plaque_dentaire, non >,
-                -diagnostic_positive_directe_favorisant: "arrayList" @< prothese_mal_adapte, traitement_odf,
+                -diagnostic_etiologique_directe_favorisant: "arrayList" @< prothese_mal_adapte, traitement_odf,
                     respiration_buccale, obturation_debordante, tartre, carie_cervicale, 
                     dent_abscente, diasteme, recession, mastication_unilaterale, [anything] >,
                 -diagnostic_etiologique_indirecte: "arrayList" @< prematurite, interfirence, trauma_occlusale_primaire, 
                     trauma_occlusale_secondaire, traitement_odf, prothese_mal_adapte, bruxisme, crispation, succion_de_pouce,
                     onychophagie, mastication_unilaterale, obturation_debordante_occlusale, [anything] >,
-                -diagnostic_differentiel: "arrayList"< classification_armitage_tout >,
-                -traitement_urgence: "arrayList" @< classification_armitage_tout >,
+                -diagnostic_positive: "arrayList" @< classification_armitage_tout >,
+                -diagnostic_differentiel: "arrayList" @< classification_armitage_tout >,
+                -traitement_urgence: "arrayList" @< antibiotherapie, contention, curtage, ecouvillonnage, incision_et_drinage, gouttiere >,
                 -traitement_initial: "string" @< detartrage, surfasage, motivation_HBD >,
                 -revaluation: "arrayList",
                 -traitement_correctif: "arrayList",
@@ -256,7 +257,7 @@ export default [
                 -rhizalyse_debutante: "string",
                 -rhizalyse_moyenne: "string",
                 -rhizalyse_terminal: "string",
-                -signe_DDM: "string"
+                -signe_ddm: "string"
             )
         `,
         response: ``,

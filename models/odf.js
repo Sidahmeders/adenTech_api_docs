@@ -272,7 +272,7 @@ export default [
                 -rhizalyse_debutante: "string",
                 -rhizalyse_moyenne: "string",
                 -rhizalyse_terminal: "string",
-                -signe_DDM: "string"
+                -signe_ddm: "string"
             )
         `,
         response: ``,
