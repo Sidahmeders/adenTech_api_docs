@@ -191,7 +191,7 @@ export default [
             (
                 -incisive_sagital:"string" @< >
                 -incisive_transversal:"string" @< >
-                -incisive_vertical:"string" @< >
+                -incisive_vertical:"string" @< overbite_normal_supracclusion, beance >
                 -canine_droite_sagital:"string" @< cl1, cl2 ,cl3 >
                 -canine_droite_vertical:"string" @< >
                 -canine_droite_transversal:"string" @< >
