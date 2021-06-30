@@ -53,7 +53,7 @@ export default [
         method: 'POST',
         route: '/pcb/maladieRisque/bisphosphonates',
         request: `
-            -diagnostique_maladie : "string" @< type1, type2 >,
+            -diagnostique_maladie : "string" @<  >,
             -pathologie_associe: "string" @< >,
             -traitement_bisphosphonate_type: "string" @< >,
             -traitement_bisphosphonate_dose: "string" @< >,
@@ -80,7 +80,7 @@ export default [
         method: 'POST',
         route: '/pcb/maladieRisque/hemopathie',
         request: `
-            -diagnostique_maladie: "string" @< type1, type2 >,
+            -diagnostique_maladie: "string" @<  >,
             -pathologie_associe: "string" @< >,
             -antecedentes_saignemet : "string" @< >,
             -antecedentes_saignemet_familialle: "string" @< >,
@@ -106,7 +106,7 @@ export default [
         method: 'POST',
         route: '/pcb/maladieRisque/irradie',
         request: `
-            -diagnostique_maladie : "string" @< type1, type2 >,
+            -diagnostique_maladie : "string" @<  >,
             -pathologie_associe: "string" @< >,
             -traitement_cours: "string" @< >,
             -traitement_dose_iradiation: "string" @< >,
@@ -132,7 +132,7 @@ export default [
         method: 'POST',
         route: '/pcb/maladieRisque/accidentCellulaire',
         request: `
-            -date_appraition : "string" @< type1, type2 >,
+            -date_appraition : "string" @<  >,
             -pathologie_associe: "string" @< >,
             -traitement_cours: "string" @< >,
             -examen_complementaires_demande: "string" @< >,
@@ -148,5 +148,120 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `
+    },
+    {
+        title: 'kyste_tumeur collection',
+        method: 'POST',
+        route: '/pcb/kyste_tumeur',
+        request: `
+            -aspecte_clinique_forme : "string" @<  >,
+            -aspecte_clinique_signe_fonctionnele : "string" @<  >,
+            -aspecte_clinique_aspecte_muquese_recouvrement : "string" @<  >,
+            -aspecte_clinique_dente_regard_lesion : "string" @<  >,
+            -aspecte_clinique_envaiessemete_partie_molle : "string" @<  >,
+            -aspecte_radio_aspect: "string" @< >,
+            -aspecte_radio_contour: "string" @< >,
+            -aspecte_radio_localisation: "string" @< >,
+            -aspecte_radio_la taille: "string" @< >,
+            -aspecte_radio_les limite de lesion: "string" @< >,
+            -aspecte_radio_evolustion: "string" @< >,
+            -aspecte_radio_rapporte_avec_structure_anatomique: "string" @< >,
+            -aspecte_radio_aspecte_macroscopique: "string" @< >,
+            -aspecte_aspecte_histologique: "string" @< >,
+
+        `,
+        response: ``
+    },
+    {
+        title: 'bilan_radiologique collection',
+        method: 'POST',
+        route: '/pcb/bilan_radiologique',
+        request: `
+            -panoramique : "string" @<  >,
+            -retroalviolaire : "string" @<  >,
+            -cone_beam : "string" @<  >,
+            -tomodensitometrie : "string" @<  >,
+            -sialographie : "string" @<  >,
+            -IRM: "string" @< >,
+            -echographie: "string" @< >,
+
+        `,
+        response: ``
+    },
+    {
+        title: 'examen_dentaire collection',
+        method: 'POST',
+        route: '/pcb/examen_dentaire',
+        request: `
+            -panoramique : "string" @< >,
+            -retroalviolaire : "string" @< >,
+            -cone_beam : "string" @<  >,
+            -tomodensitometrie : "string" @<  >,
+            -sialographie : "string" @<  >,
+            -IRM: "string" @< >,
+            -echographie: "string" @< >
+        `
+    },
+    {
+        title: 'examen_dentaire collection',
+        method: 'POST',
+        route: '/pcb/examen_dentaire',
+        request: `
+            -tooth_number: "integer" ! @< 11, 12, ..., 47, 48 >,
+            -Motif de consultation: "string" @< >,
+            -Histoire de la maladie: "string" @< >,
+            -sign_subjective_provoque: "arrayList" @< chaude, froide, sucre, [anything] >,
+            -sign_subjective_spontanne: "string" @< ague, spontanne >,
+            -sign_subjective_autres: "string",
+            -sign_objective_vitalite: "string" @< postive, negtive >,
+            -sign_objective_percussion_axial: "string" @< postive, negtive >,
+            -sign_objective_percussion_lateral: "string" @< postive, negtive >,
+            -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >,
+            -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >,
+            -Diagnostic: "string" @< >,
+            -Traitement: "string" @< >
+        `,
+        response: ``,
+        headers: ``,
+        specification: `
+            *teeth_number*
+                
+        `
+    },
+    {
+        title: 'T_D --- collection',
+        method: 'POST',
+        route: '/pcb/T_D/---',
+        request: `
+            -Motif de consultation : "string" @< >,
+            -Histoire de la maladie : "string" @< >,
+            -sign_subjective_provoque: "arrayList" @< chaude, froide, sucre, [anything] >,
+            -sign_subjective_spontanne: "string" @< ague, spontanne >,
+            -sign_subjective_autres: "string",
+            -sign_objective_vitalite: "string" @< postive, negtive >,
+            -sign_objective_percussion_axial: "string" @< postive, negtive >,
+            -sign_objective_percussion_lateral: "string" @< postive, negtive >,
+            -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >,
+            -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >,
+            -Diagnostic: "string" @< >,
+            -Traitement: "string" @< >
+        `   
+    },
+    {
+        title: 'traumatisme_alveolo_dentaire collection',
+        method: 'POST',
+        route: '/pcb/traumatisme/alveolo_dentaire',
+        request: `
+            -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
+            -etat_general_actuel: "string" !,
+            -date_traumatisme: "date" !,
+            -cause_tarumatiame: "string" !,
+            -circonstance_traumatisme: "string" !,
+            -etat_generale_cephale: "string" ! @< oui, no >,
+            -etat_general_pert_conscience: "string" ! @< oui, no >,
+            -etat_generale_nauses: "string" ! @< oui, no >,
+            -etat_generale_saignement: "string" ! @< oui, no >,
+            -examen de occlusion: "string"
+            `   
     }
 ]
