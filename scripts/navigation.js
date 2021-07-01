@@ -28,6 +28,9 @@ const navigation = `
         <a class="section" href="/pages/pcb.html">
             pcb endpoints
         </a>
+        <a class="section" href="/pages/treatments.html">
+            ongoing treatments
+        </a>
         <a class="section" href="/pages/error.html">
             status & error codes
         </a>

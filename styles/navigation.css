@@ -168,7 +168,7 @@ svg {
 }
 
 .section {
-    height: 55px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -217,8 +217,11 @@ svg {
     content: '💊';
 }
 .section:nth-child(9)::before {
-    content: '❓';
+    content: '🍀';
 }
 .section:nth-child(10)::before {
+    content: '❓';
+}
+.section:nth-child(11)::before {
     content: '👑';
 }
