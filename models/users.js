@@ -5,7 +5,7 @@ export default [
         route: '/users/login',
         request: `
             (
-                -email: "string" !,
+                -email: "string" !
                 -password: "string" !
             )
         `,
@@ -14,20 +14,20 @@ export default [
                 -token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
                 -data: {
                     --user: {
-                        ---_id: "string",
-                        ---patients_id: "arrayList",
-                        ---first_name: "string",
-                        ---last_name: "string",
-                        ---birth_date: "date",
-                        ---email: "string",
-                        ---profile_image: "buffer",
-                        ---phone_number: "integer",
-                        ---gender: "string",
-                        ---faculty: "string",
-                        ---country: "string",
-                        ---year_of_study: "integer",
-                        ---grade: "string",
-                        ---specialty: "string",
+                        ---_id: "string"
+                        ---patients_id: "arrayList"
+                        ---first_name: "string"
+                        ---last_name: "string"
+                        ---birth_date: "date"
+                        ---email: "string"
+                        ---profile_image: "buffer"
+                        ---phone_number: "integer"
+                        ---gender: "string"
+                        ---faculty: "string"
+                        ---country: "string"
+                        ---year_of_study: "integer"
+                        ---grade: "string"
+                        ---specialty: "string"
                         ---role: "string"
                     --}
                 -}
@@ -44,41 +44,41 @@ export default [
         route: '/users/register',
         request: `
             (
-                -first_name: "string" !,
-                -last_name: "string" !,
-                -birth_date: "date" !,
-                -email: "string" !,
-                -password: "string" !,
-                -profile_image: "buffer" !,
-                -identity_card: "buffer" !,
-                -phone_number: "integer",
-                -gender: "string" ! @< male, female >,
-                -faculty: "string" !,
-                -country: "string",
-                -year_of_study: "integer" @< 1st, 2nd, 3rd, 4th, 5th, 6th >,
-                -grade: "string" @ < student, resident, assistant, master_assistant, professor >,
+                -first_name: "string" !
+                -last_name: "string" !
+                -birth_date: "date" !
+                -email: "string" !
+                -password: "string" !
+                -profile_image: "buffer" !
+                -identity_card: "buffer" !
+                -phone_number: "integer"
+                -gender: "string" ! @< male, female >
+                -faculty: "string" !
+                -country: "string"
+                -year_of_study: "integer" @< 1st, 2nd, 3rd, 4th, 5th, 6th >
+                -grade: "string" @ < student, resident, assistant, master_assistant, professor >
                 -specialty: "string" @< OCE, ODF, PARO, PROTHESE, PCB >
             )
         `,
         response: `
             {
-                -token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+                -token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
                 -data: {
                     --user: {
-                        ---_id: "string",
-                        ---patients_id: "arrayList",
-                        ---first_name: "string",
-                        ---last_name: "string", 
-                        ---birth_date: "date",
-                        ---email: "string",
-                        ---profile_image: "buffer",
+                        ---_id: "string"
+                        ---patients_id: "arrayList"
+                        ---first_name: "string"
+                        ---last_name: "string"
+                        ---birth_date: "date"
+                        ---email: "string"
+                        ---profile_image: "buffer"
                         ---phone_number: "integer"
-                        ---gender: "string",
-                        ---faculty: "string",
-                        ---country: "string",
-                        ---year_of_study: "integer",
-                        ---grade: "string",
-                        ---specialty: "string",
+                        ---gender: "string"
+                        ---faculty: "string"
+                        ---country: "string"
+                        ---year_of_study: "integer"
+                        ---grade: "string"
+                        ---specialty: "string"
                         ---role: "string" @< _unAuthorized, student, professor >
                     --}
                 -}
@@ -109,18 +109,18 @@ export default [
                 -data: {
                     --patients: [
                         ---{
-                            ----_id: "string",
-                            ----user_id: "string", 
-                            ----first_name: "string",
-                            ----last_name: "string",
-                            ----gender: "string",    
-                            ----age: "string",
-                            ----address: "string",
-                            ----phone_number: "string",
-                            ----email: "string",
-                            ----marital_status: "string",
-                            ----job: "string",
-                            ----specialty_access: "arrayList",
+                            ----_id: "string"
+                            ----user_id: "string"
+                            ----first_name: "string"
+                            ----last_name: "string"
+                            ----gender: "string"
+                            ----age: "string"
+                            ----address: "string"
+                            ----phone_number: "string"
+                            ----email: "string"
+                            ----marital_status: "string"
+                            ----job: "string"
+                            ----specialty_access: "arrayList"
                             ----appointment: "date"
                         ---},
                         ---{
@@ -181,9 +181,9 @@ export default [
                 -data: {
                     --patients: [
                         ---{
-                            ----_id: "string",
-                            ---appointment: "date",
-                            ---full_name: "string",
+                            ----_id: "string"
+                            ---appointment: "date"
+                            ---full_name: "string"
                             ---phone_number: "integer"
                         ---},
                         ---{ ... }

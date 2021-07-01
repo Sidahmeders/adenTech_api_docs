@@ -44,4 +44,4 @@ function getListOfAllNumbersFromText(text) {
 }
 
 let result = getListOfAllNumbersFromText(fileText)
-console.log(result)
+console.log(result) // [10, -50, 3.1457, 1.25E-7, -20000]
