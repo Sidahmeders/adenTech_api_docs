@@ -5,7 +5,7 @@ export default [
         route: '/ongoing-treatments/oce',
         request: `
             -tooth-number: "integer" ! @< 11, 12, ..., 47, 47 >,
-            -
+            -decision terapeutique: "string" ! @< dentinogene, cementogene, osteocementogene >,
         `,
         response: ``
     }
