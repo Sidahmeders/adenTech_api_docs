@@ -150,14 +150,14 @@ export default [
         `
     },
     {
-        title: 'kyste_tumeur collection',
+        title: 'kysteTumeur collection',
         method: 'POST',
-        route: '/pcb/kyste_tumeur',
+        route: '/pcb/kysteTumeur',
         request: `
-            -aspecte_clinique_forme : "string" @<  >,
-            -aspecte_clinique_signe_fonctionnele : "string" @<  >,
-            -aspecte_clinique_aspecte_muquese_recouvrement : "string" @<  >,
-            -aspecte_clinique_dente_regard_lesion : "string" @<  >,
+            -aspecte_clinique_forme: "string" @<  >,
+            -aspecte_clinique_signe_fonctionnele: "string" @<  >,
+            -aspecte_clinique_aspecte_muquese_recouvrement: "string" @<  >,
+            -aspecte_clinique_dente_regard_lesion: "string" @<  >,
             -aspecte_clinique_envaiessemete_partie_molle : "string" @<  >,
             -aspecte_radio_aspect: "string" @< >,
             -aspecte_radio_contour: "string" @< >,
@@ -167,45 +167,41 @@ export default [
             -aspecte_radio_evolustion: "string" @< >,
             -aspecte_radio_rapporte_avec_structure_anatomique: "string" @< >,
             -aspecte_radio_aspecte_macroscopique: "string" @< >,
-            -aspecte_aspecte_histologique: "string" @< >,
-
+            -aspecte_aspecte_histologique: "string" @< >
         `,
-        response: ``
-    },
-    {
-        title: 'bilan_radiologique collection',
-        method: 'POST',
-        route: '/pcb/bilan_radiologique',
-        request: `
-            -panoramique : "string" @<  >,
-            -retroalviolaire : "string" @<  >,
-            -cone_beam : "string" @<  >,
-            -tomodensitometrie : "string" @<  >,
-            -sialographie : "string" @<  >,
-            -IRM: "string" @< >,
-            -echographie: "string" @< >,
-
-        `,
-        response: ``
-    },
-    {
-        title: 'examen_dentaire collection',
-        method: 'POST',
-        route: '/pcb/examen_dentaire',
-        request: `
-            -panoramique : "string" @< >,
-            -retroalviolaire : "string" @< >,
-            -cone_beam : "string" @<  >,
-            -tomodensitometrie : "string" @<  >,
-            -sialographie : "string" @<  >,
-            -IRM: "string" @< >,
-            -echographie: "string" @< >
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     },
     {
-        title: 'examen_dentaire collection',
+        title: 'bilanRadiologique collection',
         method: 'POST',
-        route: '/pcb/examen_dentaire',
+        route: '/pcb/bilanRadiologique',
+        request: `
+            -panoramique: "string" @<  >,
+            -retroalviolaire : "string" @<  >,
+            -cone_beam: "string" @<  >,
+            -tomodensitometrie: "string" @<  >,
+            -sialographie: "string" @<  >,
+            -irm: "string" @< >,
+            -echographie: "string" @< >
+        `,
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
+    },
+    {
+        title: 'examenDentaire collection',
+        method: 'POST',
+        route: '/pcb/examenDentaire',
         request: `
             -tooth_number: "integer" ! @< 11, 12, ..., 47, 48 >,
             -Motif de consultation: "string" @< >,
@@ -222,10 +218,11 @@ export default [
             -Traitement: "string" @< >
         `,
         response: ``,
-        headers: ``,
-        specification: `
-            *teeth_number*
-                
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     },
     {
@@ -234,23 +231,16 @@ export default [
         route: '/pcb/T_D/---',
         request: `
             -Motif de consultation : "string" @< >,
-            -Histoire de la maladie : "string" @< >,
-            -sign_subjective_provoque: "arrayList" @< chaude, froide, sucre, [anything] >,
-            -sign_subjective_spontanne: "string" @< ague, spontanne >,
-            -sign_subjective_autres: "string",
-            -sign_objective_vitalite: "string" @< postive, negtive >,
-            -sign_objective_percussion_axial: "string" @< postive, negtive >,
-            -sign_objective_percussion_lateral: "string" @< postive, negtive >,
-            -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >,
-            -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >,
-            -Diagnostic: "string" @< >,
-            -Traitement: "string" @< >
-        `   
+            -
+            -
+            -
+            -
+        `
     },
     {
-        title: 'traumatisme_alveolo_dentaire collection',
+        title: 'traumatisme alveoloDentaire collection',
         method: 'POST',
-        route: '/pcb/traumatisme/alveolo_dentaire',
+        route: '/pcb/traumatisme/alveoloDentaire',
         request: `
             -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >,
             -etat_general_actuel: "string" !,
@@ -262,6 +252,6 @@ export default [
             -etat_generale_nauses: "string" ! @< oui, no >,
             -etat_generale_saignement: "string" ! @< oui, no >,
             -examen de occlusion: "string"
-            `   
+            `
     }
 ]
