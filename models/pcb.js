@@ -150,7 +150,7 @@ export default [
                 -diagnostic_positive: "arrayList" @< >,
                 -diagnostique_etiologique: "arrayList" @< >,
                 -protocole_antibiothique: "arrayList" @< >,
-                observation_particulieres: "arrayList" @< >
+                -observation_particulieres: "arrayList" @< >
             )
         `,
         response: ``,
@@ -264,7 +264,7 @@ export default [
                 -etat_generale_nauses: "string" ! @< oui, no >,
                 -etat_generale_saignement: "string" ! @< oui, no >,
                 -examen_occlusion: "string",
-                -Fractures_os_alvéolaires: "string"
+                -fractures_os_alveolaires: "string"
             )
         `,
         response: ``,
