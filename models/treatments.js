@@ -16,7 +16,7 @@ export default [
         `,
         specification: `
             *decision_terapeutique*
-                -dentinogene, cementogene, osteocementogene: @< traitement_urgence, pancements_serie, radiographie_retro_aleolaire_, blanchimente_dente_vivante,
+                -dentinogene _ cementogene _ osteocementogene: @< traitement_urgence, pancements_serie, radiographie_retro_aleolaire_, blanchimente_dente_vivante,
                     radiographie_panoramique,  blanchimente_dente_devitalise, coiffage_pulpaire_inderecte, coiffage_pulpaire_derecte, pulpotomie, traitemente_endo_ dent_ temporaire,
                     apexogenese, apexification, depulpation_mono_radiculaire, depulpation_bi_radiculaire, depulpation_molaires, depulpation_dds, retraitement_endo_mono,
                     retraitement_endo_pluri, restauration_amalgame_01face, restauration_amalgame_02face, restauration_amalgame_03face, reconstitution_amalgame_large_avec_ancrage,

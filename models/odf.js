@@ -109,7 +109,7 @@ export default [
         `,
         specification: `
             *temps_traitement*
-                -1er_temps 2em_temps ___ 29_temps 30em_temps: @< >
+                -1er_temps _ 2em_temps ____ 29_temps _ 30em_temps: @< >
         `
     },
     {

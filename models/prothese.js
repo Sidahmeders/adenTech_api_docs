@@ -21,7 +21,7 @@ export default [
         `,
         specification: `
             *kenedy_apelgate_maxillaire || kenedy_apelgate_mandibule*
-                -cl1 cl2 cl3 cl4 cl5 cl6: @< 1, 2, 3, 4, 5, 6 >
+                -cl1 _ cl2 _ cl3 _ cl4 _ cl5 _ cl6: @< 1, 2, 3, 4, 5, 6 >
         `
     },
     {
