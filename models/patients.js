@@ -50,7 +50,8 @@ export default [
         `,
         specification: `
             *specialty_access*
-                xxxxxxxxxxxxxxxxxx
+                this options are meant to allow only the selected service
+                to access and see what is in the patient document.
         `
     }
 ]

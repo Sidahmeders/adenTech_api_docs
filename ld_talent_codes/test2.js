@@ -7,7 +7,7 @@ It should return a list of all the numbers found in the file.
 
 Example input file:
 ==========================================
-#This is an input file with some text and numbers
+#This is an input file with some textArray and numbers
 10
   -50
 Some more numbers follow
@@ -22,27 +22,38 @@ Above function should return [10, -50, 3.1457, 1.25E-7, -20000]
 
 const fs = require('fs')
 function readFileSync(pathToFile) {
-    try {
-        const data = fs.readFileSync(pathToFile, 'utf8')
-        const textContent = data.toString()
-
-        return textContent
-    } catch (e) {
-        throw Error(e.stack)
-    }
+    const textArray = fs.readFileSync(pathToFile).toString().split('\n')
+    return textArray
 }
 
 const pathToFile = './test2.file.txt' // make sure you substitute 'pathToFile' with the actual path to a file in your filesystem.
-const fileText = readFileSync(pathToFile)
+const textArray = readFileSync(pathToFile)
 
-function getListOfAllNumbersFromText(text) {
-    // regular expression to sreach for a valid number
-    const regex = RegExp(/-?[\d\.\E\-\d]+/, 'g')
-    const LineRgx = RegExp(/\n?[a-z\W\w1-9]+/, 'gi')
-    const listOfNumbers = text.match(LineRgx)
+function getListOfAllNumbersFromText(textArray) {
+    let listOfValidNumbers = [],
+        validNumber
 
-    return listOfNumbers
+    for (let textLine of textArray) {
+        validNumber = getValidNumbers(textLine)
+        validNumber = validNumber ? getTextWithoutWhiteSpace(validNumber[0]) : null
+
+        validNumber ? listOfValidNumbers.push(validNumber[0]) : ''
+    }
+
+    return listOfValidNumbers
 }
 
-let result = getListOfAllNumbersFromText(fileText)
-console.log(result) // [10, -50, 3.1457, 1.25E-7, -20000]
+function getValidNumbers(textLine) {
+    // regular expression to sreach for valid numbers in a text
+    const regex = RegExp(/-?[\d-E](?!\S)?.+/, 'g')
+    return textLine.match(regex)
+}
+
+function getTextWithoutWhiteSpace(textLine) {
+    // regular expression that returns a text with no space in between
+    const regex = RegExp(/^\s*\S+\s*$/, 'g')
+    return textLine.match(regex)
+}
+
+let result = getListOfAllNumbersFromText(textArray)
+console.log(result)
