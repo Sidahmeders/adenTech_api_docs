@@ -38,7 +38,8 @@ const fileText = readFileSync(pathToFile)
 function getListOfAllNumbersFromText(text) {
     // regular expression to sreach for a valid number
     const regex = RegExp(/-?[\d\.\E\-\d]+/, 'g')
-    const listOfNumbers = text.match(regex)
+    const LineRgx = RegExp(/\n?[a-z\W\w1-9]+/, 'gi')
+    const listOfNumbers = text.match(LineRgx)
 
     return listOfNumbers
 }
