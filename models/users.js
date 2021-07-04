@@ -79,7 +79,7 @@ export default [
                         ---year_of_study: "integer"
                         ---grade: "string"
                         ---specialty: "string"
-                        ---role: "string" @< _unAuthorized, student, professor >
+                        ---role: "string" @< _unAuthorized, _student, _assistant, _professor >
                     --}
                 -}
             }
@@ -96,8 +96,7 @@ export default [
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
-                -_assistant _professor: can create/update new patients and patients record, plus some related utilities 
-                    based on specialty (odf_chart, cephalometric_chart, etc...)
+                -_assistant _professor: can create/update new patients and patients record, plus some related utilities based on specialty (odf_chart, cephalometric_chart, etc...)
         `
     },
     {
@@ -167,10 +166,10 @@ export default [
             }
         `,
         headers: `
-        *Request Headers*
-            -authToken: "HS256_bearer_token" !
-            -accept: "application/json"
-            -contentType: "application/json"
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     },
     {
@@ -193,10 +192,10 @@ export default [
             }
         `,
         headers: `
-        *Request Headers*
-            -authToken: "HS256_bearer_token" !
-            -accept: "application/json"
-            -contentType: "application/json"
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
         `
     }
 ]

@@ -168,7 +168,7 @@ svg {
 }
 
 .section {
-    height: 50px;
+    height: 47px;
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -224,4 +224,7 @@ svg {
 }
 .section:nth-child(11)::before {
     content: '👑';
+}
+.section:nth-child(12)::before {
+    content: '🎨';
 }

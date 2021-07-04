@@ -95,7 +95,7 @@ export default [
                 -groupe_sanguin: "string" @< >
                 -examen_complementaires_demande: "arrayList" @< >
                 -decision_therapeutique: "arrayList" @< >
-                -transfusion_sanguine : "string" @< oui,non >
+                -transfusion_sanguine : "string" @< oui, non >
                 -adjoction_facteure_manquant : "string" @< oui, non >
                 -protocole_antibiothique: "arrayList" @< >
                 -observation_particulieres: "arrayList" @< >
