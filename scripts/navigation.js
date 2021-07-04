@@ -37,7 +37,7 @@ const navigation = `
         <a class="section" href="/pages/admin.html">
             admin endpoints
         </a>
-        <a class="section" href="pages/statistics.html">
+        <a class="section" href="/pages/statistics.html">
             statistics endpoints
         </a>
     </div>
