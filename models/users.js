@@ -157,9 +157,9 @@ export default [
             {
                 -data: {
                     --patient: {
-                        ---_id: "string",
-                        ---full_name: "string",
-                        ---appointment: "date",
+                        ---_id: "string"
+                        ---full_name: "string"
+                        ---appointment: "date"
                         ---phone_number: "integer"
                 --}
                 -}

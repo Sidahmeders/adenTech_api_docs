@@ -32,7 +32,7 @@ export default [
         headers: `
             *Request Headers || Response Headers*
                 -accept: "application/json, multipart/form data"
-                -contentType: "application/json, multipart/form data"
+                -contentType: "application/json, multipart/form data" !
 
             *Response Headers Cookie*
             -# this authToken is set from the server with the httpOnly Flag
@@ -80,8 +80,8 @@ export default [
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json, multipart/form data"
-                -contentType: "multipart/form data"
-                -credentials: 'include'
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
         `,
         specification: `
             *role*
@@ -138,8 +138,8 @@ export default [
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json, multipart/form data"
-                -contentType: "multipart/form data"
-                -credentials: 'include'
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
         `,
         specification: `
             *role*
@@ -185,8 +185,8 @@ export default [
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json, multipart/form data"
-                -contentType: "multipart/form data"
-                -credentials: 'include'
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
         `
     },
     {
@@ -225,8 +225,8 @@ export default [
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json, multipart/form data"
-                -contentType: "multipart/form data"
-                -credentials: 'include'
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
         `,
         specification: `
             *queryValue*
@@ -252,8 +252,8 @@ export default [
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json, multipart/form data"
-                -contentType: "multipart/form data"
-                -credentials: 'include'
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
         `
     },
     {
