@@ -1,45 +1,66 @@
+const navigationElements = [
+    {
+        label: 'users endpoints',
+        href: '/pages/users.html'
+    },
+    {
+        label: 'patients endpoints',
+        href: '/pages/patients.html'
+    },
+    {
+        label: 'general endpoints',
+        href: '/pages/general.html'
+    },
+    {
+        label: 'oce endpoints',
+        href: '/pages/oce.html'
+    },
+    {
+        label: 'odf endpoints',
+        href: '/pages/odf.html'
+    },
+    {
+        label: 'paro endpoints',
+        href: '/pages/paro.html'
+    },
+    {
+        label: 'prothese endpoints',
+        href: '/pages/prothese.html'
+    },
+    {
+        label: 'pcb endpoints',
+        href: '/pages/pcb.html'
+    },
+    {
+        label: 'ongoing treatments',
+        href: '/pages/treatments.html'
+    },
+    {
+        label: 'status & error codes',
+        href: '/pages/error.html'
+    },
+    {
+        label: 'admin endpoints',
+        href: '/pages/admin.html'
+    },
+    {
+        label: 'statistics endpoints',
+        href: '/pages/statistics.html'
+    }
+]
+
 const navigation = `
     <sidebar id="sidebar">
     <div class="sidebar-logo">
         <a href="/">AD<span>T</span>ECH</a>
     </div>
     <div class="sections">
-        <a class="section" href="/pages/users.html">
-            users endpoints
-        </a>
-        <a class="section" href="/pages/patients.html">
-            patients endpoints
-        </a>
-        <a class="section" href="/pages/general.html">
-            general endpoints
-        </a>
-        <a class="section" href="/pages/oce.html">
-            oce endpoints
-        </a>
-        <a class="section" href="/pages/odf.html">
-            odf endpoints
-        </a>
-        <a class="section" href="/pages/paro.html">
-            paro endpoints
-        </a>
-        <a class="section" href="/pages/prothese.html">
-        prothese endpoints
-        </a>
-        <a class="section" href="/pages/pcb.html">
-            pcb endpoints
-        </a>
-        <a class="section" href="/pages/treatments.html">
-            ongoing treatments
-        </a>
-        <a class="section" href="/pages/error.html">
-            status & error codes
-        </a>
-        <a class="section" href="/pages/admin.html">
-            admin endpoints
-        </a>
-        <a class="section" href="/pages/statistics.html">
-            statistics endpoints
-        </a>
+        ${navigationElements
+            .map((item) => {
+                return setNavElement(item)
+            })
+            .toString()
+            .replace(/,/g, '')}
     </div>
     </sidebar>
 
@@ -67,5 +88,18 @@ const navigation = `
     </header>
 `
 
-const navElement = document.getElementsByTagName('nav')[0]
-navElement.innerHTML = navigation
+function setNavElement({ label, href }) {
+    return `
+        <a class="section" onclick="(() => {
+            console.log(this)
+        })()" href="${href}">
+            ${label}
+        </a>
+    `
+}
+
+const navBar = document.getElementsByTagName('nav')[0]
+navBar.innerHTML = navigation
+
+// const navLinks = document.getElementsByClassName('section')
+// console.log(navLinks)

@@ -71,8 +71,7 @@ function createEndpointElement({
                 (function (node) {
                     const url = node.parentNode.innerHTML.split('<')[0]
                     return navigator.clipboard.writeText(url)
-                })(this);
-                ">copy</button></span>
+                })(this)">copy</button></span>
             </code>
             <div class="container">
                 ${
