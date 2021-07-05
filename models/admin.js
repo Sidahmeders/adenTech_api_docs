@@ -307,11 +307,36 @@ export default [
     {
         title: 'grant access to new/unAuthorized Users',
         method: 'PUT',
-        route: '/admin/users/grantAccess'
+        route: '/admin/users/grantAccess',
+        request: `
+            *Query Paramater*
+                -id: "string" !
+                -garde: "string" !
+        `,
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json, multipart/form data"
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
+        `
     },
     {
         title: 'delete/drop new/unAuthorized OR existing/old Users',
         method: 'DELETE',
-        route: '/admin/users/dropUser'
+        route: '/admin/users/dropUser?id=user_id',
+        request: `
+            *Query Paramater*
+                -id: "string" !
+        `,
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json, multipart/form data"
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
+        `
     }
 ]
