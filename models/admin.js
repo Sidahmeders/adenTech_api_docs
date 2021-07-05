@@ -313,7 +313,12 @@ export default [
                 -id: "string" !
                 -garde: "string" !
         `,
-        response: ``,
+        response: `
+            -data: {
+                -user_id: "string"
+                -name: "string"
+            -}
+        `,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
@@ -330,7 +335,12 @@ export default [
             *Query Paramater*
                 -id: "string" !
         `,
-        response: ``,
+        response: `
+            -data: {
+                -user_id: "string"
+                -name: "string"
+            -}
+        `,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !
