@@ -29,6 +29,9 @@ export default [
                         ---grade: "string"
                         ---specialty: "string"
                         ---role: "string"
+                        ---date_of_modification: "date"
+                        ---date_of_creation: "date"
+                        ---__v: "integer"
                     --}
                 -}
             }
@@ -36,6 +39,15 @@ export default [
         headers: `
             *Response Headers*
                 -authToken: "HS256_bearer_token" 
+        `,
+        specification: `
+            *role*
+                -_unAuthorized: can't create/update/delete new patients or patients record
+                -_student: can create/update new patients and patients record
+                -_assistant _professor: can create/update new patients and patients record, plus some related utilities based on specialty (odf_chart, cephalometric_chart, etc...)
+
+            *__V*
+                -# this property stands for _version_ and whenever you update the user record this prop will increase by one(1)
         `
     },
     {
@@ -80,6 +92,9 @@ export default [
                         ---grade: "string"
                         ---specialty: "string"
                         ---role: "string" @< _unAuthorized, _student, _assistant, _professor >
+                        ---date_of_modification: "date"
+                        ---date_of_creation: "date"
+                        ---__v: "integer"
                     --}
                 -}
             }
@@ -97,6 +112,9 @@ export default [
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
                 -_assistant _professor: can create/update new patients and patients record, plus some related utilities based on specialty (odf_chart, cephalometric_chart, etc...)
+
+            *__V*
+                -# this property stands for _version_ and whenever you update the user record this prop will increase by one(1)
         `
     },
     {
@@ -122,14 +140,11 @@ export default [
                             ----specialty_access: "arrayList"
                             ----appointment: "date"
                         ---},
-                        ---{
-                            ----...
-                            ----...
-                        ---},
+                        ---{ ... },
                         ---etc...
                     --]
                 -}
-            }        
+            }
         `,
         headers: `
             *Request Headers*
@@ -139,8 +154,8 @@ export default [
         `,
         specification: `
             *specialty_access*
-                this options are meant to allow only the selected service
-                to access and see what is in the patient document.
+                -# this options are meant to allow only the selected service
+                -to access and see what is in the patient document.
         `
     },
     {
@@ -151,6 +166,8 @@ export default [
         request: `
             (
                 -appointment: "date" !
+                -fisrt_name: "string"
+                -last_name: "string"
             )
         `,
         response: `
@@ -186,7 +203,8 @@ export default [
                             ---full_name: "string"
                             ---phone_number: "integer"
                         ---},
-                        ---{ ... }
+                        ---{ ... },
+                        ---etc...
                     ---]
                 -}
             }

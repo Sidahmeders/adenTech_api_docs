@@ -26,6 +26,9 @@ export default [
                     ---grade: "string"
                     ---specialty: "string"
                     ---role: "string" @< admin >
+                    ---date_of_modification: "date"
+                    ---date_of_creation: "date"
+                    ---__v: "integer"
                 --}
             -}
         `,
@@ -88,6 +91,9 @@ export default [
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
                 -_assistant _professor: can create/update new patients and patients record, plus some related utilities based on specialty (odf_chart, cephalometric_chart, etc...)
+            
+            *__V*
+                -# this property stands for _version_ and whenever you update the user record this prop will increase by one(1)
         `
     },
     {
@@ -131,6 +137,9 @@ export default [
                     ---grade: "string"
                     ---specialty: "string"
                     ---role: "string" @< _unAuthorized, _student, _assistant, _professor >
+                    ---date_of_modification: "date"
+                    ---date_of_creation: "date"
+                    ---__v: "integer"
                 --}
             -}
         `,
@@ -146,12 +155,15 @@ export default [
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
                 -_assistant _professor: can create/update new patients and patients record, plus some related utilities based on specialty (odf_chart, cephalometric_chart, etc...)
+
+            *__V*
+                -# this property stands for _version_ and whenever you update the user record this prop will increase by one(1)
         `
     },
     {
-        title: 'get/returnt access to new or unAuthorized Users Users',
+        title: 'get/return unAuthorized Users',
         method: 'GET',
-        route: '/admin/userst access to new or/unAuthorized Users?limit=number',
+        route: '/admin/users/unAuthorized?limit=number',
         request: `
             *Query Paramater*
                 -limit: 'integer'
@@ -161,7 +173,7 @@ export default [
         response: `
             -data: {
                 --users: [
-                    ---user: {
+                    ---{
                         ----_id: "string"
                         ----patients_id: "arrayList"
                         ----first_name: "string"
@@ -177,7 +189,9 @@ export default [
                         ----grade: "string"
                         ----specialty: "string"
                         ----role: "string" @< _unAuthorized, _student, _assistant, _professor >
-                    ---}
+                    ---},
+                    ---{ ... },
+                    ---etc...
                 --]
             -}
         `,
@@ -201,7 +215,7 @@ export default [
         response: `
             -data: {
                 --users: [
-                    ---user: {
+                    ---{
                         ----_id: "string"
                         ----patients_id: "arrayList"
                         ----first_name: "string"
@@ -217,7 +231,9 @@ export default [
                         ----grade: "string"
                         ----specialty: "string"
                         ----role: "string" [options]< _unAuthorized, _student, _assistant, _professor >
-                    ---}
+                    ---},
+                    ---{ ... },
+                    ---etc...
                 --]
             -}
         `,
@@ -244,10 +260,42 @@ export default [
             (
                 -first_name: "string"
                 -last_name: "string"
-                -
+                -birth_date: "string"
+                -phone_number: "integer"
+                -gender: "string"
+                -faculty: "string"
+                -country: "string"
+                -year_of_study: "integer"
+                -grade: "string"
+                -specialty: "string"
+                -role: "string"
+                -email: "string"
+                -password: "string"
             )
         `,
-        response: ``,
+        response: `
+            -data: {
+                --user: {
+                    ---_id: "string"
+                    ---first_name: "string"
+                    ---last_name: "string"
+                    ---birth_date: "string"
+                    ---phone_number: "integer"
+                    ---gender: "string"
+                    ---faculty: "string"
+                    ---country: "string"
+                    ---year_of_study: "integer"
+                    ---grade: "string"
+                    ---specialty: "string"
+                    ---role: "string"
+                    ---email: "string"
+                    ---date_of_modification: "date"
+                    ---date_of_creation: "date"
+                    ---patients_id: "arrayList"
+                    ---__v: "integer"
+                --}
+            -}
+        `,
         headers: `
             *Request Headers*
                 -authToken: "HS256_bearer_token" !

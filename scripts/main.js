@@ -40,7 +40,7 @@ function appendEndpointData(endpointData) {
                         background:#9923;
                         padding:5px 12px;
                         display:block;
-                        margin-bottom: -15px;
+                        margin-bottom: -20px;
                     `
                     const styledHeader = detail.innerHTML.replace(
                         entry,
@@ -83,7 +83,7 @@ function createEndpointElement({
                                     ${request}
                                 </p>
                             </details>`
-                        : '<div style="margin-bottom: -15px"></div>'
+                        : '<div style="margin-bottom: -20px"></div>'
                 }
                 <details class="response">
                     <summary>Response Body</summary>
@@ -99,7 +99,7 @@ function createEndpointElement({
                                     ${headers}
                                 </p>
                             </details>`
-                        : '<div style="margin-bottom: -15px"></div>'
+                        : '<div style="margin-bottom: -20px"></div>'
                 }
                 ${
                     specification
@@ -109,7 +109,7 @@ function createEndpointElement({
                                     ${specification}
                                 </p>
                             </details>`
-                        : '<div style="margin-bottom: -15px"></div>'
+                        : '<div style="margin-bottom: -20px"></div>'
                 }
             </div>
         </div>
