@@ -180,6 +180,10 @@ svg {
     text-decoration: none;
 }
 
+.section.focused {
+    background: #cae5ff7e;
+}
+
 .section:hover {
     cursor: pointer;
 }

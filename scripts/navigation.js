@@ -55,12 +55,14 @@ const navigation = `
         <a href="/">AD<span>T</span>ECH</a>
     </div>
     <div class="sections">
-        ${navigationElements
-            .map((item) => {
-                return setNavElement(item)
-            })
-            .toString()
-            .replace(/,/g, '')}
+        ${navigationElements.map((item, index) => {
+            const focusedNav = localStorage.getItem('focusedNav')
+
+            if (focusedNav == index) {
+                return setNavElement({ ...item, id: index, isFocused: true })
+            }
+            return setNavElement({ ...item, id: index })
+        })}
     </div>
     </sidebar>
 
@@ -88,18 +90,20 @@ const navigation = `
     </header>
 `
 
-function setNavElement({ label, href }) {
+function setNavElement({ label, href, id, isFocused }) {
+    const classValue = `section ${isFocused ? 'focused' : ''}`
+    const clickHnadler = `(() => {
+        localStorage.setItem('focusedNav' ~ ${id})
+    })()`
+
     return `
-        <a class="section" onclick="(() => {
-            console.log(this)
-        })()" href="${href}">
+        <a id="${id}" class="${classValue}" onclick="${clickHnadler}" href="${href}">
             ${label}
         </a>
     `
 }
 
-const navBar = document.getElementsByTagName('nav')[0]
-navBar.innerHTML = navigation
+// And then for all matches
 
-// const navLinks = document.getElementsByClassName('section')
-// console.log(navLinks)
+const navBar = document.getElementsByTagName('nav')[0]
+navBar.innerHTML = navigation.replace(/,/g, '').replace(/~/g, ',')
