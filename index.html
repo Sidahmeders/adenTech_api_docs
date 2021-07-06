@@ -12,7 +12,13 @@
         <nav></nav>
 
         <cards id="cards">
-            <a href="/pages/users.html" class="card">
+            <a
+                href="/pages/users.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 0)
+            })()"
+            >
                 <h2>Users Ednpoints</h2>
                 <ul>
                     <li>[regitser/create] users, [login/get] users</li>
@@ -24,13 +30,25 @@
                     </li>
                 </ul>
             </a>
-            <a href="/pages/patients.html" class="card">
+            <a
+                href="/pages/patients.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 1)
+            })()"
+            >
                 <h2>Patients Ednpoints</h2>
                 <ul>
                     <li>post a new patient</li>
                 </ul>
             </a>
-            <a href="/pages/general.html" class="card">
+            <a
+                href="/pages/general.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 2)
+            })()"
+            >
                 <h2>General Examination Forms Ednpoints</h2>
                 <ul>
                     <li>post and get examintaion endobuccal</li>
@@ -38,7 +56,13 @@
                     <li>post and get medical anamnese</li>
                 </ul>
             </a>
-            <a href="/pages/oce.html" class="card">
+            <a
+                href="/pages/oce.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 3)
+            })()"
+            >
                 <h2>OCE Forms Ednpoints</h2>
                 <ul>
                     <li>post and get carie dentaire</li>
@@ -47,7 +71,13 @@
                     <li>post and get traumatisme dentaire patient</li>
                 </ul>
             </a>
-            <a href="/pages/odf.html" class="card">
+            <a
+                href="/pages/odf.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 4)
+            })()"
+            >
                 <h2>ODF Forms Ednpoints</h2>
                 <ul>
                     <li>post and get moulage</li>
@@ -61,7 +91,13 @@
                     <li>post and get interpretation radiologic odf_paro</li>
                 </ul>
             </a>
-            <a href="/pages/paro.html" class="card">
+            <a
+                href="/pages/paro.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 5)
+            })()"
+            >
                 <h2>PARO Forms Ednpoints</h2>
                 <ul>
                     <li>post and get examen gingival</li>
@@ -75,7 +111,13 @@
                     <li>post and get interpretation radiologic odf_paro</li>
                 </ul>
             </a>
-            <a href="/pages/prothese.html" class="card">
+            <a
+                href="/pages/prothese.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 6)
+            })()"
+            >
                 <h2>Prothese Forms Endpoints</h2>
                 <ul>
                     <li>post and get edente partielle</li>
@@ -84,7 +126,13 @@
                     <li>post and get examen occlusion dynamic</li>
                 </ul>
             </a>
-            <a href="/pages/pcb.html" class="card">
+            <a
+                href="/pages/pcb.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 7)
+            })()"
+            >
                 <h2>PCB Forms Endpoints</h2>
                 <ul>
                     <li>post and get maladie a risque cardiopathie</li>
@@ -93,6 +141,7 @@
                     <li>post and get maladie a risque bisphosphonate</li>
                     <li>post and get maladie a risque irradie</li>
                     <li>post and get maladie a risque accident cillulaire</li>
+                    <li>post and get kyste tumeur</li>
                     <li>post and get bilan radiologique</li>
                     <li>post and get examen dentaire</li>
                     <li>post and get traumatisme alveolo dentaire general</li>
@@ -100,7 +149,13 @@
                     <li>post and get traumatisme maxillo facial</li>
                 </ul>
             </a>
-            <a href="/pages/treatments.html" class="card">
+            <a
+                href="/pages/treatments.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 8)
+            })()"
+            >
                 <h2>Ongoing Treatment</h2>
                 <ul>
                     <li>post and get ongoing treatments oce</li>
@@ -108,6 +163,51 @@
                     <li>post and get ongoing treatments paro</li>
                     <li>post and get ongoing treatments prothese</li>
                     <li>post and get ongoing treatments pcb</li>
+                </ul>
+            </a>
+            <a
+                href="/pages/error.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 9)
+            })()"
+            >
+                <h2>Error and Status Code</h2>
+                <ul>
+                    -----
+                </ul>
+            </a>
+            <a
+                href="/pages/admin.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 10)
+            })()"
+            >
+                <h2>Admin Endpoints</h2>
+                <ul>
+                    <li>login the admin User</li>
+                    <li>return [All] OR [Specified Number] of Users</li>
+                    <li>post/create new Users</li>
+                    <li>return [All] OR [Specified Number] of unAuthorized Users</li>
+                    <li>
+                        return or search for some specific users by specialty, email, name, etc...
+                    </li>
+                    <li>update users account info</li>
+                    <li>grant access to new/unAuthorized Users</li>
+                    <li>delete/drop new/unAuthorized OR existing/old Users</li>
+                </ul>
+            </a>
+            <a
+                href="/pages/statistics.html"
+                class="card"
+                onclick="(() => {
+                localStorage.setItem('focusedNav', 11)
+            })()"
+            >
+                <h2>Statistics Endpoints</h2>
+                <ul>
+                    -----
                 </ul>
             </a>
         </cards>
