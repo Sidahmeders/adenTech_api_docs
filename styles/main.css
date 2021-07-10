@@ -29,7 +29,7 @@ details {
 }
 
 details[open] {
-    max-height: 99rem;
+    max-height: 125rem;
     transition: all 2s ease;
 }
 

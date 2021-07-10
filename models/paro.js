@@ -138,12 +138,8 @@ export default [
             (
                 -patient_id: "string" !
                 -diagnostic_etiologique_directe_declenchant: "string" @< plaque_dentaire, non >
-                -diagnostic_etiologique_directe_favorisant: "arrayList" @< prothese_mal_adapte, traitement_odf,
-                    respiration_buccale, obturation_debordante, tartre, carie_cervicale, 
-                    dent_abscente, diasteme, recession, mastication_unilaterale, [anything] >
-                -diagnostic_etiologique_indirecte: "arrayList" @< prematurite, interfirence, trauma_occlusale_primaire, 
-                    trauma_occlusale_secondaire, traitement_odf, prothese_mal_adapte, bruxisme, crispation, succion_de_pouce,
-                    onychophagie, mastication_unilaterale, obturation_debordante_occlusale, [anything] >
+                -diagnostic_etiologique_directe_favorisant: "arrayList" @< prothese_mal_adapte, traitement_odf, respiration_buccale, obturation_debordante, tartre, carie_cervicale, dent_abscente, diasteme, recession, mastication_unilaterale, [anything] >
+                -diagnostic_etiologique_indirecte: "arrayList" @< prematurite, interfirence, trauma_occlusale_primaire, trauma_occlusale_secondaire, traitement_odf, prothese_mal_adapte, bruxisme, crispation, succion_de_pouce, onychophagie, mastication_unilaterale, obturation_debordante_occlusale, [anything] >
                 -diagnostic_positive: "arrayList" @< classification_armitage_tout >
                 -diagnostic_differentiel: "arrayList" @< classification_armitage_tout >
                 -traitement_urgence: "arrayList" @< antibiotherapie, contention, curtage, ecouvillonnage, incision_et_drinage, gouttiere >
@@ -267,5 +263,33 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `
+    },
+    {
+        title: 'examenSondage collection',
+        method: 'POST',
+        route: '/odf/examenSondage',
+        request: `
+            (
+                -11
+                -12
+                -13
+                -14
+                -15
+                -16
+                -17
+                -18
+                -21
+                ..
+                -28
+                -31
+                ..
+                -38
+                -41
+                ..
+                -48
+            )
+        `,
+        response: ``,
+        headers: ``
     }
 ]
