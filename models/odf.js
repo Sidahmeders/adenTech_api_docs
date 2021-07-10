@@ -11,14 +11,14 @@ export default [
                 -maxillaire_profondeur_voute: "string" @< profonde, moyenene, plate >
                 -maxillaire_malposition: "string" @< maxi_teeth_number, maxi_teeth_malposition >
                 -maxillaire_ddm: "integer" @< range between [~20, ..., +20] >
-                -maxillaire_indice_ponte_d4g4: "string" @< maxilaire_large, maxilaire_moyenne, maxilaire_etroite >
-                -maxillaire_indice_ponte_d6g6: "string" @< maxilaire_large, maxilaire_moyenne, maxilaire_etroite >
+                -maxillaire_indice_ponte_d4g4: "string" @< endoalveolie, exoalveolie, normoalveolie >
+                -maxillaire_indice_ponte_d6g6: "string" @< endoalveolie, exoalveolie, normoalveolie >
                 -maxillaire_indice_doumange: "string" @< ogivale, haute, basse >
                 -mandubule_forme: "string" @< v, u >
                 -mandubule_symetrie: "string" @< conserve, non_conserve >
                 -mandubule_malposition: "string" @< mand_teeth_number, mand_teeth_malposition >
-                -mandubule_indice_pont_d4g4: "string" @< mandibule_large, mandibule_moyenne, mandibule_etroite >
-                -mandubule_indice_pont_d6g6: "string" @< mandibule_large, mandibule_moyenne, mandibule_etroite >
+                -mandubule_indice_pont_d4g4: "string" @< endoalveolie, exoalveolie, normoalveolie >
+                -mandibule_indice_pont_d6g6: "string" @<endoalveolie, exoalveolie, normoalveolie >
             )
         `,
         response: ``,
@@ -31,12 +31,12 @@ export default [
         specification: `
             *maxillaire_malposition*
                 -maxi_teeth_number: @< 11, 12, ..., 47, 48 >
-                -maxi_teeth_malposition: @< ectopique, rotation, axiale, marginale, version_vestibulaire, 
-                    version_palatin, verion_mesiale, version_distale,[anything] >
+                -maxi_teeth_malposition: @< ectopique, rotation_axiale, rotation_marginale, version_vestibulaire, 
+                    version_palatine, verion_mesiale, version_distale,[anything] >
             
-            *mandubule_malposition*
+            *mandibule_malposition*
                 -mand_teeth_number: @< 11, 12, ..., 47, 48 >
-                -mand_teeth_malposition: @< ectopique, rotation_axiale, marginale, version_vestibulaire, 
+                -mand_teeth_malposition: @< ectopique, rotation_axiale, rotation_marginale, version_vestibulaire, 
                     version_palatin, verion_mesiale, version_distale, [anything] >
         `
     },
@@ -47,10 +47,10 @@ export default [
         request: `
             (
                 -patient_id: "string" !
-                -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
-                -antecedente_odf_duree: "string"
-                -antecedente_odf_type: "string"
-                -tics_habitude: "arrayList" @< oui, no >
+                -motif_consultation: "arrayList" ! @< fonctionnel, esthetique, douleur, [anything] >
+                -antecedent_odf: "arraylist"@< amovible, fixe multiattache, orthopedique, [anything] >
+                -antecedent_odf_type: "arraylist"@<  >
+                -tics_habitude: "arraylist" @< oui, no >
             )
         `,
         response: ``,
@@ -62,7 +62,7 @@ export default [
         `,
         specification: `
             *tics_habitude*
-                -oui: @< succion_digitale, succion_levre_inferieure, mordillment_levre, bruxisme, onychophagie, [anything] >
+                -oui: @< succion_digitale, succion_levre_inferieure, mordillment_levre, bruxisme, onychophagie,succion_tetine, [anything] >
         `
     },
     {
@@ -73,26 +73,28 @@ export default [
             (
                 -patient_id: "string" !
                 -dp_class_squelettique: "string" ! @< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard >
-                -dp_forme_clinique: "arrayList" ! @< endoalveolie, exoalveolie, endognathie, exognathie, latero_gnathie, infraalviole_anterieure,
-                    infraalveolie posterieur, supraalveolie, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, 
-                    brachy_maxilie, dolicho_mandibulie, brachy_mandibulie, [anything] >
+                -dp_forme_clinique: "arrayList" ! @<  promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, 
+                    brachy_maxilie, dolicho_mandibulie, brachy_mandibulie >
                 -dp_typologie_faciale: "string" ! @< open_bite, normo_bite, deep_bite >
-                -dp_direction_croissance_faciale: "string" ! @< anterieur, posterieur, moyenne >
-                -dp_direction_croissance_mandibulaire: "string" ! @< anterieur, posterieur, moyenne >
-                -dp_anomalies_associees: "arrayList" ! @< endoalveolie, exoalveolie, endognathie, exognathie, latero_gnathie, infraalviole_anterieure, 
-                    infraalveolie_posterieur, supraalveolie, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie ,
-                    brachy_maxilie, dolicho_mandibulie_brachy_mandibulie, proglissement_mandibulaire, latero_deviation, [anything] >
-                -diagnostic_etiologique: "arrayList" ! @< heriditaire, foctionnelle, [anything] >
-                -anomalies_basale_vertical: "arrayList" @< >
-                -anomalies_basale_transversal: "arrayList" @< >
-                -anomalies_alviolaire_vertical: "arrayList" @< >
-                -anomalies_alviolaire_transversal: "arrayList" @< >
-                -anomalies_alviolaire_antero_posterieure: "arrayList" @< >
-                -anomalies_dentaires: "arrayList" @< >
-                -diagnostic_differentiel: "arrayList" !
-                -plan_trt_objective_squeletique: "arrayList" !
-                -plan_trt_objective_fonctionnels: "arrayList" !
-                -plan_trt_objective_occlusaux: "arrayList" !
+                -dp_direction_croissance_faciale: "string" ! @< anterieure, posterieure, moyenne >
+                -dp_direction_croissance_mandibulaire: "string" ! @< anterieure, posterieure, moyenne >
+                -anomalies_basale_vertical: "arrayList" @<exes_vertical_anterieure, insufisance_verticale_anterieure >
+                -anomalies_basale_transversal: "arrayList" @< endognathie, exognathie, endognathie_unilaterale, exognathie unilaterale>
+                -anomalies_alviolaire_vertical: "arrayList" @<supralveolie_anterieure, infralveolie_anterieure, infralveolie_posterieure >
+                -anomalies_alviolaire_transversal: "arrayList" @< endoalveolie, exoaleolie, endoalveolie_unilaterale, exoaleolie_unilaterale >
+                -anomalies_alviolaire_antero_posterieure: "arrayList" @< proalveoliesuperieure, retroalvieliesuperieure, promaxillie, retromaxillie >
+                -anomalies_dentaires: "arrayList" @< ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd  >
+                -diagnostic_etiologique: "arrayList" ! @< heriditaire, heridite_croisee, ventilation_orale, ventilation_mixte, deglutition_atypique_pulsion_languale_anterieure, 
+                    deglutition_atypique_interposition _anterieure, position_basse_protrusive_langue, mastication_unilaterale, odontome, hypotonicite_levre_superieure, hypotonicite_levre_inferieure,
+                    hypertonicite_levre_superieure, hypertonicite_levre_inferieure, [anything] >
+                -diagnostic_differentiel: "arrayList" !@< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, 
+                    brachy_maxilie, dolicho_mandibulie, brachy_mandibulie, exes_vertical_anterieure, insufisance_verticale_anterieure, endognathie, exognathie, endognathie_unilaterale, exognathie_unilaterale,
+                    supralveolie_anterieure, infralveolie_anterieure, infralveole_posterieure, endoalveolie, exoaleolie, endoalveolie_unilaterale, exoaleolie_unilaterale, proalveolie_superieure, retroalvieliesuperieure,
+                    retromaxillie, ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd >
+                -plan_trt_objective_squeletique: "arrayList"  @< classe 1 squelitique, normo gnathie, normobite >
+                -plan_trt_objective_fonctionnels: "arrayList"  @< ventilation_nasale, deglutition_physiologique, mastication_unilaterale_alternee, phonation_physiologique, arret_parafonction >
+                -plan_trt_objective_occlusaux: "arrayList" ! @< overjete_physiologique , overbite_physiologique, coincidance_point_interincisif, class1_canine_droite, class1_canine_gauche, 
+                    class_1_molaire droite, class1_molaire_gauche, class2_molaire_droite_therapeutique, class2_molaire_gauche_therapeutique, class2_molaire_droite_therapeutique, class2_molaire_gauche, therapeutique >
                 -plan_trt_objective_esthetiques: "arrayList" !
                 -plan_trt_contension : "arrayList" !
                 -plan_trt_pronostic: "arrayList" !
@@ -146,16 +148,16 @@ export default [
         request: `
             (
                 -patient_id: "string" <required>
-                -symetrie_faciale: "string"
-                -parallelisme_trois_ligne: "string"
-                -typologie_facial: "string"
-                -profile_izard: "string"
-                -profile_ricketts: "string"
-                -muscilature_joues: "string"
-                -muscilature_levres_repos: "string"
-                -muscilature_levres_fonction: "string"
-                -sillons_slm: "string"
-                -sillons_sng: "string"
+                -symetrie_faciale: "string" @< conserve, nonconserve >
+                -parallelisme_trois_ligne: "string" @< conserve, nonconserve >
+                -typologie_facial: "string"  "string" @< openbite, deepbite, normobite >
+                -profile_izard: "string" "string" @< sisforntal, transfrontal, orthofrontal >
+                -profile_ricketts: "string" "string" @< convexe, rectiligne, concave  >
+                -muscilature_joues: "string" "string" @< isotonique, hypertonique, hypotonique >
+                -muscilature_levres_repos: "string" "string" @<isotonique, hypertonique, hypotonique>
+                -muscilature_levres_fonction: "string" "string" @< isotonique, hypertonique, hypotonique >
+                -sillons_slm: "string" "string" @< marque, peumarque, tropmarque>
+                -sillons_sng: "string" "string" @< marque, peumarque, tropmarque >
             )
         `,
         response: ``,
@@ -209,6 +211,57 @@ export default [
                 -authToken: "HS256_bearer_token" !
                 -accept: "application/json"
                 -contentType: "application/json"
+        `,
+        specification: `
+            *rapport_cranio_faciaux_sagittaux_sna*
+                -IF VALUE RANGE BETWEEN(6.00 AND 7.00): position normal du maxillaire paraport a la base du crane 
+                -IF VALUE GREATER than 7.00: position avance du maxillaire paraport a la base du crane
+                -IF VALUE LESS THAN 6.00: position recule du maxillaire paraport a la base du crane
+
+            *rapport_cranio_faciaux_sagittaux_snb*
+                position normal du mandibule paraport a la base du crane
+                position avance du mandibule paraport a la base du crane
+                position recule du mandibule paraport a la base du crane
+
+            *rapport_cranio_faciaux_sagittaux_anb*
+                position avance du mxillaire paraport a la mandibule
+                position recule du mxillaire paraport a la mandibule
+                position normal du mxillaire paraport a la mandibule
+
+            *mensuration_basales_fpm_ena*
+                longeure augmente du maxillaire
+                longeure moyenne du maxillaire
+                longeure diminue du maxillaire
+
+            *mensuration_basales_at_chateau*
+                longeure augmente du maxillaire
+                longeure moyenne du maxillaire
+                longeure diminue du maxillaire
+
+            *mensuration_basales_longeur_mandibule*
+                longeure augmente du mandibule
+                longeure moyenne du mandibule
+                longeure diminue du mandibule
+                
+            *mensuration_basales_xipm*
+                longeure augmente du mandibule
+                longeure moyenne du mandibule
+                longeure diminue du mandibule
+            
+            *direction_croissance_fma_tweed*
+                rotation posterieure de la mandibule
+                rotation moyenne de la mandibule
+                rotation anterieure de la mandibule
+
+            *direction_croissance_axe_brodie*
+                direction de croissance faciale anteriere
+                direction de croissance faciale posterieuure
+                direction de croissance faciale moyenne
+
+            *direction_croissance_axe_facial_Rickeets*
+                direction de croissance faciale anteriere
+                direction de croissance faciale posterieuure
+                direction de croissance faciale moyenne
         `
     },
     {
@@ -217,11 +270,11 @@ export default [
         route: '/odf/examenFonction',
         request: `
             (
-                -patient_id: "string" !,
-                -ventilation: 'string',
-                -daeglutition: 'string',
-                -mastication: 'string',
-                -phonation: 'string'
+                -patient_id: "string" !
+                -ventilation: "string"
+                -daeglutition: "string"
+                -mastication: "string"
+                -phonation: "string"
             )
         `,
         response: ``,
@@ -269,21 +322,21 @@ export default [
         route: '/odf/ineterprationRadiologicParo',
         request: `
             (
-                -bases_osseuses: "string"
-                -sinus_maxilllaires: "string"
-                -articulation_temporo_mandibulaire: "string"
-                -fosses_nasales: "string"
-                -germes: "string"
-                -etat_couronnes: "string"
-                -etat_racines: "string"
-                -edification_racines_complete: "string"
-                -edification_racines_terminal: "string"
-                -medification_racines_moyenne: "string"
-                -edification_racines_debutante: "string"
-                -rhizalyse_debutante: "string"
-                -rhizalyse_moyenne: "string"
-                -rhizalyse_terminal: "string"
-                -signe_ddm: "string"
+                -bases_osseuses: "string"  @< >
+                -sinus_maxilllaires: "string" @< >
+                -articulation_temporo_mandibulaire: "string"  @< >
+                -fosses_nasales: "string" @< >
+                -germes: "string" @< >
+                -etat_couronnes: "string" @< >
+                -etat_racines: "string" @< >
+                -edification_racines_complete: "string" @< >
+                -edification_racines_terminal: "string" @< >
+                -medification_racines_moyenne: "string" @< >
+                -edification_racines_debutante: "string" @< >
+                -rhizalyse_debutante: "string" @< >
+                -rhizalyse_moyenne: "string" @< >
+                -rhizalyse_terminal: "string" @< >
+                -signe_ddm: "string" @< >
             )
         `,
         response: ``,
@@ -300,21 +353,21 @@ export default [
         route: '/odf/interpretationRadiologic_Odf_Paro',
         request: `
             (
-                -bases_osseuses: "string"
-                -sinus_maxilllaires: "string"
-                -articulation_temporo_mandibulaire: "string"
-                -fosses_nasales: "string"
-                -germes: "string"
-                -etat_couronnes: "string"
-                -etat_racines: "string"
-                -edification_racines_complete: "string"
-                -edification_racines_terminal: "string"
-                -medification_racines_moyenne: "string"
-                -edification_racines_debutante: "string"
-                -rhizalyse_debutante: "string"
-                -rhizalyse_moyenne: "string"
-                -rhizalyse_terminal: "string"
-                -signe_ddm: "string"
+                -bases_osseuses: "string" @< >
+                -sinus_maxilllaires: "string" @< >
+                -articulation_temporo_mandibulaire: "string" @< >
+                -fosses_nasales: "string" @< >
+                -germes: "string" @< toth number>
+                -etat_couronnes: "string" @< >
+                -etat_racines: "string" @< >
+                -edification_racines_complete: "string" @< tooth_number_dent_permanate >
+                -edification_racines_terminal: "string" @< tooth_number_dent_permanate >
+                -medification_racines_moyenne: "string" @< tooth_number_dent_permanate >
+                -edification_racines_debutante: "string" @< tooth_number_dent_permanate >
+                -rhizalyse_debutante: "string" @< tooth_number_dent_de_lait >
+                -rhizalyse_moyenne: "string" @< tooth_number_dent_de_lait >
+                -rhizalyse_terminal: "string" @< tooth_number_dent_de_lait >
+                -signe_ddm: "string" @< >
             )
         `,
         response: ``,
