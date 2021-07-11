@@ -270,26 +270,46 @@ export default [
         route: '/odf/examenSondage',
         request: `
             (
-                -11
-                -12
-                -13
-                -14
-                -15
-                -16
-                -17
-                -18
-                -21
-                ..
-                -28
-                -31
-                ..
-                -38
-                -41
-                ..
-                -48
+                -11: "string" @< pv, pp, pr, ps >
+                -12: "string" @< pv, pp, pr, ps >
+                -13: "string" @< pv, pp, pr, ps >
+                -14: "string" @< pv, pp, pr, ps >
+                -15: "string" @< pv, pp, pr, ps >
+                -16: "string" @< pv, pp, pr, ps >
+                -17: "string" @< pv, pp, pr, ps >
+                -18: "string" @< pv, pp, pr, ps >
+                -21: "string" @< pv, pp, pr, ps >
+                -22: "string" @< pv, pp, pr, ps >
+                -23: "string" @< pv, pp, pr, ps >
+                -24: "string" @< pv, pp, pr, ps >
+                -25: "string" @< pv, pp, pr, ps >
+                -26: "string" @< pv, pp, pr, ps >
+                -27: "string" @< pv, pp, pr, ps >
+                -28: "string" @< pv, pp, pr, ps >
+                -31: "string" @< pv, pp, pr, ps >
+                -32: "string" @< pv, pp, pr, ps >
+                -33: "string" @< pv, pp, pr, ps >
+                -34: "string" @< pv, pp, pr, ps >
+                -35: "string" @< pv, pp, pr, ps >
+                -36: "string" @< pv, pp, pr, ps >
+                -37: "string" @< pv, pp, pr, ps >
+                -38: "string" @< pv, pp, pr, ps >
+                -41: "string" @< pv, pp, pr, ps >
+                -42: "string" @< pv, pp, pr, ps >
+                -43: "string" @< pv, pp, pr, ps >
+                -44: "string" @< pv, pp, pr, ps >
+                -45: "string" @< pv, pp, pr, ps >
+                -46: "string" @< pv, pp, pr, ps >
+                -47: "string" @< pv, pp, pr, ps >
+                -48: "string" @< pv, pp, pr, ps >
             )
         `,
         response: ``,
-        headers: ``
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
     }
 ]
