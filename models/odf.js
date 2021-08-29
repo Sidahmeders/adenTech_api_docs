@@ -50,7 +50,6 @@ export default [
                 -patient_id: "string" !
                 -motif_consultation: "arrayList" ! @< fonctionnel, esthetique, douleur, [anything] >
                 -antecedent_odf: "arraylist"@< amovible, fixe multiattache, orthopedique, [anything] >
-                -antecedent_odf_type: "arraylist"@<  >
                 -tics_habitude: "arraylist" @< oui, no >
             )
         `,
@@ -118,9 +117,9 @@ export default [
                 -hygien_bucaux_dentaire: "string" ! @< mauvais, moyenne, bon >
                 -probleme_paro: "string" @< oui, no >
                 -langue_volume: "string" @< macroglossie, microglossie, normoglossie >
-                -langue_situation: "string" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >
-                -langue_frien_linguale: "string"
-                -age_dentaire: "integer" @< court, physiologique >
+                -langue_situation: "arrayList" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >
+                -langue_frien_linguale: "string" @< court, physiologique >
+                -age_dentaire: "integer"
                 -satde_dentitin: "string" @< temporaire_stable, temporaire_constitutionnelle, mixte_stable, mixte_constitutionnelle, adolescente_stable, adolescente_constitutionnele, adulte_jeune_stable, adulte_jeune_constitutionnelle, adulte_complete_stable, adulte_complete_constitutionnelle >
                 -chemin_fermeture: "string"< devie_gauche, devie_droite >
             )
@@ -143,13 +142,13 @@ export default [
                 -symetrie_faciale: "string" @< conserve, nonconserve >
                 -parallelisme_trois_ligne: "string" @< conserve, nonconserve >
                 -typologie_facial: "string"  "string" @< openbite, deepbite, normobite >
-                -profile_izard: "string" "string" @< sisforntal, transfrontal, orthofrontal >
-                -profile_ricketts: "string" "string" @< convexe, rectiligne, concave  >
-                -muscilature_joues: "string" "string" @< isotonique, hypertonique, hypotonique >
-                -muscilature_levres_repos: "string" "string" @<isotonique, hypertonique, hypotonique>
-                -muscilature_levres_fonction: "string" "string" @< isotonique, hypertonique, hypotonique >
-                -sillons_slm: "string" "string" @< marque, peumarque, tropmarque>
-                -sillons_sng: "string" "string" @< marque, peumarque, tropmarque >
+                -profile_izard: "string" @< sisforntal, transfrontal, orthofrontal >
+                -profile_ricketts: "string" @< convexe, rectiligne, concave  >
+                -muscilature_joues: "string" @< isotonique, hypertonique, hypotonique >
+                -muscilature_levres_repos: "string" @< isotonique, hypertonique, hypotonique>
+                -muscilature_levres_fonction: "string" @< isotonique, hypertonique, hypotonique >
+                -sillons_slm: "string" @< marque, peumarque, tropmarque>
+                -sillons_sng: "string" @< marque, peumarque, tropmarque >
             )
         `,
         response: ``,
