@@ -17,8 +17,9 @@ export default [
                 -mandubule_forme: "string" @< v, u >
                 -mandubule_symetrie: "string" @< conserve, non_conserve >
                 -mandubule_malposition: "string" @< mand_teeth_number, mand_teeth_malposition >
+                -mandubule_ddm: "integer" @< range between [~20, ..., +20] >
                 -mandubule_indice_pont_d4g4: "string" @< endoalveolie, exoalveolie, normoalveolie >
-                -mandibule_indice_pont_d6g6: "string" @<endoalveolie, exoalveolie, normoalveolie >
+                -mandibule_indice_pont_d6g6: "string" @< endoalveolie, exoalveolie, normoalveolie >
             )
         `,
         response: ``,
