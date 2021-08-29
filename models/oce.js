@@ -9,7 +9,7 @@ export default [
                 -tooth_number: "integer" !
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
                 -histoire_maladie: "string"
-                -class_black: "integer" @< cl1, cl2, cl3, cl4, cl5 >
+                -class_black: "string" @< cl1, cl2, cl3, cl4, cl5 >
                 -class_sit_sta: "string" @< sit_sta[1<1, 2, 3, 4>, 2<1, 2, 3, 4>, 3<1, 2, 3, 4>] >
                 -diagnostic_positive: "string" ! @< baume1, baume2, baume3, baume4 >
                 -diagnostic_etiologique: "string" ! @< carie, traumtisme, [anything] >
@@ -35,12 +35,12 @@ export default [
                 -tooth_number: "integer" !
                 -sign_subjective_provoque: "arrayList" @< chaude, froide, sucre, [anything] >
                 -sign_subjective_spontanne: "string" @< ague, spontanne >
-                -sign_subjective_autres: "string"
+                -sign_subjective_autres: "arrayList"
                 -sign_objective_vitalite: "string" @< postive, negtive >
                 -sign_objective_percussion_axial: "string" @< postive, negtive >
                 -sign_objective_percussion_lateral: "string" @< postive, negtive >
                 -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >
-                -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >
+                -sign_objective_mobilite: "string" @< 0, 1, 2, 3, 4 >
                 -radio_panoramique: "string"
                 -radio_retroslviolsire_couronne: "string"
                 -radio_retroslviolsire_racine: "string"
