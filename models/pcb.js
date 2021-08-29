@@ -226,8 +226,8 @@ export default [
         request: `
             (
                 -tooth_number: "integer" ! @< 11, 12, ..., 47, 48 >
-                -Motif de consultation: "arrayList" @< fonctionnele, esthetique, douleure, [anything] >
-                -Histoire de la maladie: "string" @< >
+                -motif_consultation: "arrayList" @< fonctionnele, esthetique, douleure, [anything] >
+                -histoire_maladie: "string" @< >
                 -sign_subjective_provoque: "arrayList" @< chaude, froide, sucre, [anything] >
                 -sign_subjective_spontanne: "string" @< ague, spontanne >
                 -sign_subjective_autres: "string",
@@ -236,8 +236,8 @@ export default [
                 -sign_objective_percussion_lateral: "string" @< postive, negtive >
                 -sign_objective_palpation_fond_vestibule: "string" @< postive, negtive >
                 -sign_objective_mobilite: "integer" @< 0, 1, 2, 3, 4 >
-                -Diagnostic: "string" @< >
-                -Traitement: "string" @< >
+                -diagnostic: "string" @< >
+                -traitement: "string" @< >
             )
         `,
         response: ``,
@@ -302,9 +302,9 @@ export default [
         route: '/pcb/traumatisme/maxilloFacial',
         request: `
             (
-                -Aanalyse_traite_blesse_face: "arrayList"  @< fonctionnele, esthetique, douleure, [anything] >
-                -Aanalyse_traite_blesse_profil: "string"
-                -Aanalyse_traite_blesse_arrire_en_haut: "date"
+                -analyse_traite_blesse_face: "arrayList"  @< fonctionnele, esthetique, douleure, [anything] >
+                -analyse_traite_blesse_profil: "string"
+                -analyse_traite_blesse_arrire_en_haut: "date"
                 -palpation_maxilaire superieure: "string"
                 -palpation_mandibule: "string"
                 -palpation_territoires sensitifs et moteurs: "string"
