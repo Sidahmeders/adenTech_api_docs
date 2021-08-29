@@ -308,37 +308,6 @@ export default [
         `
     },
     {
-        title: 'ineterprationRadiologicParo collection',
-        method: 'POST',
-        route: '/odf/ineterprationRadiologicParo',
-        request: `
-            (
-                -bases_osseuses: "string"  @< >
-                -sinus_maxilllaires: "string" @< >
-                -articulation_temporo_mandibulaire: "string"  @< >
-                -fosses_nasales: "string" @< >
-                -germes: "string" @< >
-                -etat_couronnes: "string" @< >
-                -etat_racines: "string" @< >
-                -edification_racines_complete: "string" @< >
-                -edification_racines_terminal: "string" @< >
-                -medification_racines_moyenne: "string" @< >
-                -edification_racines_debutante: "string" @< >
-                -rhizalyse_debutante: "string" @< >
-                -rhizalyse_moyenne: "string" @< >
-                -rhizalyse_terminal: "string" @< >
-                -signe_ddm: "string" @< >
-            )
-        `,
-        response: ``,
-        headers: `
-            *Request Headers*
-                -authToken: "HS256_bearer_token" !
-                -accept: "application/json"
-                -contentType: "application/json"
-        `
-    },
-    {
         title: 'interpretationRadiologic_Odf_Paro collection',
         method: 'POST',
         route: '/odf/interpretationRadiologic_Odf_Paro',
