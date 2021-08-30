@@ -90,10 +90,11 @@ export default [
                 -plan_trt_objective_squeletique: "arrayList"  @< classe 1 squelitique, normo gnathie, normobite >
                 -plan_trt_objective_fonctionnels: "arrayList"  @< ventilation_nasale, deglutition_physiologique, mastication_unilaterale_alternee, phonation_physiologique, arret_parafonction >
                 -plan_trt_objective_occlusaux: "arrayList" ! @< overjete_physiologique , overbite_physiologique, coincidance_point_interincisif, class1_canine_droite, class1_canine_gauche, class_1_molaire droite, class1_molaire_gauche, class2_molaire_droite_therapeutique, class2_molaire_gauche_therapeutique, class2_molaire_droite_therapeutique, class2_molaire_gauche, therapeutique >
-                -plan_trt_objective_esthetiques: "arrayList" !
+                -plan_trt_objective_esthetiques: "arrayList" ! @<  >
                 -plan_trt_contension : "arrayList" !
-                -plan_trt_pronostic: "arrayList" !
-                -plan_trt_principes_dente_extraire: "arrayList" !
+                -plan_trt_pronostic: "arrayList" ! @<bon, favorable, reserve, defavorable  >
+                -plan_trt_principes_dente_extraire: "arrayList" @< teeth_number >
+                -plan_trt_principes_dente_soin: "arrayList" @< teeth_number >
                 -temps_traitement: "arrayList" ! @< 1er_temps, 2em_temps, ..., 29em_temps, 30em_temps >
             )        
         `,
@@ -106,7 +107,7 @@ export default [
         `,
         specification: `
             *temps_traitement*
-                -1er_temps _ 2em_temps ____ 29_temps _ 30em_temps: @< >
+                -1er_temps _ 2em_temps ____ 29_temps _ 30em_temps: @< orthodontique_amovible_extractionnel, orthodontique_amovible_non_extractionnel, orthodontique_fixe_extractionnel, orthodontique_fixe_no_extractionnel, orthopedique_fonctionnele, orthopedique_mecanique, foctionnele_mecanique, fonctionnele_non_mecanique, orthodontico_chirurgicale >
         `
     },
     {
