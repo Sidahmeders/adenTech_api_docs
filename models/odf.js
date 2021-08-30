@@ -317,17 +317,17 @@ export default [
                 -sinus_maxilllaires: "string" @< >
                 -articulation_temporo_mandibulaire: "string" @< >
                 -fosses_nasales: "string" @< >
-                -germes: "string" @< toth number>
+                -germes: "arrayList" @< toth number>
                 -etat_couronnes: "string" @< >
                 -etat_racines: "string" @< >
-                -edification_racines_complete: "string" @< tooth_number_dent_permanate >
-                -edification_racines_terminal: "string" @< tooth_number_dent_permanate >
-                -medification_racines_moyenne: "string" @< tooth_number_dent_permanate >
-                -edification_racines_debutante: "string" @< tooth_number_dent_permanate >
-                -rhizalyse_debutante: "string" @< tooth_number_dent_de_lait >
-                -rhizalyse_moyenne: "string" @< tooth_number_dent_de_lait >
-                -rhizalyse_terminal: "string" @< tooth_number_dent_de_lait >
-                -signe_ddm: "string" @< >
+                -edification_racines_complete: "arrayList" @< tooth_number_dent_permanate >
+                -edification_racines_terminal: "arrayList" @< tooth_number_dent_permanate >
+                -medification_racines_moyenne: "arrayList" @< tooth_number_dent_permanate >
+                -edification_racines_debutante: "arrayList" @< tooth_number_dent_permanate >
+                -rhizalyse_debutante: "arrayList" @< tooth_number_dent_de_lait >
+                -rhizalyse_moyenne: "arrayList" @< tooth_number_dent_de_lait >
+                -rhizalyse_terminal: "arrayList" @< tooth_number_dent_de_lait >
+                -signe_ddm: "arrayList" @< >
             )
         `,
         response: ``,
