@@ -75,13 +75,13 @@ export default [
             (
                 -patient_id: "string" !
                 -dp_class_squelettique: "string" ! @< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard >
-                -dp_forme_clinique: "arrayList" ! @<  promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, brachy_maxilie, dolicho_mandibulie, brachy_mandibulie >
+                -dp_forme_clinique: "arrayList" ! @< promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, brachy_maxilie, dolicho_mandibulie, brachy_mandibulie >
                 -dp_typologie_faciale: "string" ! @< open_bite, normo_bite, deep_bite >
                 -dp_direction_croissance_faciale: "string" ! @< anterieure, posterieure, moyenne >
                 -dp_direction_croissance_mandibulaire: "string" ! @< anterieure, posterieure, moyenne >
-                -anomalies_basale_vertical: "arrayList" @<exes_vertical_anterieure, insufisance_verticale_anterieure >
+                -anomalies_basale_vertical: "arrayList" @< exes_vertical_anterieure, insufisance_verticale_anterieure >
                 -anomalies_basale_transversal: "arrayList" @< endognathie, exognathie, endognathie_unilaterale, exognathie unilaterale>
-                -anomalies_alviolaire_vertical: "arrayList" @<supralveolie_anterieure, infralveolie_anterieure, infralveolie_posterieure >
+                -anomalies_alviolaire_vertical: "arrayList" @< supralveolie_anterieure, infralveolie_anterieure, infralveolie_posterieure >
                 -anomalies_alviolaire_transversal: "arrayList" @< endoalveolie, exoaleolie, endoalveolie_unilaterale, exoaleolie_unilaterale >
                 -anomalies_alviolaire_antero_posterieure: "arrayList" @< proalveoliesuperieure, retroalvieliesuperieure, promaxillie, retromaxillie >
                 -anomalies_dentaires: "arrayList" @< ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd  >
@@ -92,7 +92,7 @@ export default [
                 -plan_trt_objective_occlusaux: "arrayList" ! @< overjete_physiologique , overbite_physiologique, coincidance_point_interincisif, class1_canine_droite, class1_canine_gauche, class_1_molaire droite, class1_molaire_gauche, class2_molaire_droite_therapeutique, class2_molaire_gauche_therapeutique, class2_molaire_droite_therapeutique, class2_molaire_gauche, therapeutique >
                 -plan_trt_objective_esthetiques: "arrayList" ! @<  >
                 -plan_trt_contension : "arrayList" !
-                -plan_trt_pronostic: "arrayList" ! @<bon, favorable, reserve, defavorable  >
+                -plan_trt_pronostic: "arrayList" ! @< bon, favorable, reserve, defavorable  >
                 -plan_trt_principes_dente_extraire: "arrayList" @< teeth_number >
                 -plan_trt_principes_dente_soin: "arrayList" @< teeth_number >
                 -temps_traitement: "arrayList" ! @< 1er_temps, 2em_temps, ..., 29em_temps, 30em_temps >
