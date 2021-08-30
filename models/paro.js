@@ -162,7 +162,7 @@ export default [
     {
         title: 'examenFonction collections',
         method: 'POST',
-        route: '/odf/examenFonction',
+        route: '/paro/examenFonction',
         request: `
             (
                 -patient_id: "string" !
@@ -183,7 +183,7 @@ export default [
     {
         title: 'examenOcclusionStatic collection',
         method: 'POST',
-        route: '/odf/examenOcclusionStatic',
+        route: '/paro/examenOcclusionStatic',
         request: `
             (
                 -incisive_sagital:"string" @< >
@@ -214,7 +214,7 @@ export default [
     {
         title: 'examenOcclusionDynamic collection',
         method: 'POST',
-        route: '/odf/examenOcclusionDynamic',
+        route: '/paro/examenOcclusionDynamic',
         request: `
             (
                 -protrution_cote travaillaint: "string" @< rapport2/4 >
@@ -236,7 +236,7 @@ export default [
     {
         title: 'interpretationRadiologic_Odf_Paro collection',
         method: 'POST',
-        route: '/odf/interpretationRadiologic_Odf_Paro',
+        route: '/paro/interpretationRadiologic_Odf_Paro',
         request: `
             (
                 -bases_osseuses: "string"
@@ -267,7 +267,7 @@ export default [
     {
         title: 'examenSondage collection',
         method: 'POST',
-        route: '/odf/examenSondage',
+        route: '/paro/examenSondage',
         request: `
             (
                 -11: "string" @< pv, pp, pr, ps >

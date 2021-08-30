@@ -11,6 +11,7 @@ export default [
                 -maxillaire_profondeur_voute: "string" @< profonde, moyenene, plate >
                 -maxillaire_malposition: "string" @< maxi_teeth_number, maxi_teeth_malposition >
                 -maxillaire_ddm: "integer" @< range between [~20, ..., +20] >
+                -maxillaire_ddm_type: "string" @< ddm_macrodontie_relative, ddm_macrodontie_absolue, ddm_microdontie_relative, ddm_microdontie_absolue >
                 -maxillaire_indice_ponte_d4g4: "string" @< endoalveolie, exoalveolie, normoalveolie >
                 -maxillaire_indice_ponte_d6g6: "string" @< endoalveolie, exoalveolie, normoalveolie >
                 -maxillaire_indice_doumange: "string" @< ogivale, haute, basse >
@@ -18,6 +19,7 @@ export default [
                 -mandubule_symetrie: "string" @< conserve, non_conserve >
                 -mandubule_malposition: "string" @< mand_teeth_number, mand_teeth_malposition >
                 -mandubule_ddm: "integer" @< range between [~20, ..., +20] >
+                -mandubule_ddm_type: "string" @< ddm_macrodontie_relative, ddm_macrodontie_absolue, ddm_microdontie_relative, ddm_microdontie_absolue >
                 -mandubule_indice_pont_d4g4: "string" @< endoalveolie, exoalveolie, normoalveolie >
                 -mandibule_indice_pont_d6g6: "string" @< endoalveolie, exoalveolie, normoalveolie >
             )
@@ -119,6 +121,8 @@ export default [
                 -langue_volume: "string" @< macroglossie, microglossie, normoglossie >
                 -langue_situation: "arrayList" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >
                 -langue_frien_linguale: "string" @< court, physiologique >
+                -labial_frien_sup: "string" @< court, physiologique >
+                -labial_frien_inf: "string" @< court, physiologique >
                 -age_dentaire: "integer"
                 -satde_dentitin: "string" @< temporaire_stable, temporaire_constitutionnelle, mixte_stable, mixte_constitutionnelle, adolescente_stable, adolescente_constitutionnele, adulte_jeune_stable, adulte_jeune_constitutionnelle, adulte_complete_stable, adulte_complete_constitutionnelle >
                 -chemin_fermeture: "string"< devie_gauche, devie_droite >
@@ -282,21 +286,43 @@ export default [
         route: '/odf/examenOcclusionStatic',
         request: `
             (
-                -incisive_sagital:"string" @< >
-                -incisive_transversal:"string" @< >
-                -incisive_vertical:"string" @< >
-                -canine_droite_sagital:"string" @< cl1, cl2 ,cl3 >
-                -canine_droite_vertical:"string" @< >
-                -canine_droite_transversal:"string" @< >
-                -canine_gauche_sagital:"string" @< cl1, cl2, cl3 >
-                -canine_gauche_vertical:"string" @< >
-                -canine_gauche_transversal:"string" @< >
-                -molaire_gauche_sagital:"string" @< cl1, cl2, cl3 >
-                -molaire_gauche_vertical:"string" @< >
-                -molaire_gauche_transversal:"string" @< >
-                -molaire_droite_sagital:"string" @< >
-                -molaire_droite_transversal:"string" @< >
-                -molaire_droite_verticale:"string" @<  >
+                -incisive_sagital: "integer" @< range between [~20, ..., +20] >
+                -incisive_transversal: "string" @< coincidence, devie_gauche , devie_droite >
+                -incisive_vertical: "integer" @< range between [~20, ..., +20] >
+                -canine_droite_sagital: "string" @< cl1, cl2 ,cl3 >
+                -canine_droite_vertical: "string" @< respecte, nonrespecte >
+                -canine_droite_transversal: "string" @< respecte, nonrespecte >
+                -canine_gauche_sagital: "string" @< cl1, cl2, cl3 >
+                -canine_gauche_vertical: "string" @< respecte, nonrespecte >
+                -canine_gauche_transversal: "string" @< respecte, nonrespecte >
+                -molaire_gauche_sagital: "string" @< cl1, cl2, cl3 >
+                -molaire_gauche_vertical: "string" @< respecte, nonrespecte >
+                -molaire_gauche_transversal: "string" @< respecte, nonrespecte >
+                -molaire_droite_sagital: "string" @< respecte, nonrespecte >
+                -molaire_droite_transversal: "string" @< respecte, nonrespecte >
+                -molaire_droite_verticale: "string" @< respecte, nonrespecte >
+            )
+        `,
+        response: ``,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json"
+                -contentType: "application/json"
+        `
+    },
+    {
+        title: 'examenOcclusionDynamic collection',
+        method: 'POST',
+        route: '/odf/examenOcclusionDynamic',
+        request: `
+            (
+                -protrution_cote travaillaint: "string" @< >
+                -protrution_conte non travaillaint: "string" @< desoclusion_posterieure, interference >
+                -lateralite_droit_cote_travaillaint: "string" @< foction_canine, fonction_groupe >
+                -lateralite_droit_non_travaillaint: "string" @< desocclusion, interference >
+                -lateralite_gauche_cote_travaillaint: "string" @< foction canine, fonction_groupe >
+                -lateralite_gauche_non_travaillaint: "string" @< desocclusion, interference >
             )
         `,
         response: ``,
