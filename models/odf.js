@@ -265,11 +265,10 @@ export default [
         route: '/odf/examenFonction',
         request: `
             (
-                -patient_id: "string" !
-                -ventilation: "string"
-                -daeglutition: "string"
-                -mastication: "string"
-                -phonation: "string"
+                -ventilation: "string" @< naso_buccale,nasal,buccale >
+                -daeglutition: "string"  @< physiologique, atypique_pulsion_linguale, atypique_pulsion_linguale, atypique_interposition_anterieure, atypique_interposition_laterale, atypique_participation_muscle_mimique >
+                -mastication: "string" @< belateral, unilateral_alterne, unilateral_gauche, unilaterlae_droite >
+                -phonation: "string" @< correcte, atypique >
             )
         `,
         response: ``,
