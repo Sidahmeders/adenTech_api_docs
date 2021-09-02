@@ -80,16 +80,8 @@ export default [
                 -AS_personnel_pcb: "arrayList"
                 -AS_personnel_proth: "arrayList"
                 -AS_personnel_paro: "arrayList"
-                -AS_mere_odf: "arrayList"
-                -AS_mere_oce: "arrayList"
-                -AS_mere_pcb: "arrayList"
-                -AS_mere_paro: "arrayList"
-                -AS_mere_proth: "arrayList"
-                -AS_pere_odf: "arrayList"
-                -AS_pere_oce: "arrayList"
-                -AS_pere_pcb: "arrayList"
-                -AS_pere_proth: "arrayList"
-                -AS_pere_paro: "arrayList"
+                -AS_mere: "arrayList"
+                -AS_pere: "arrayList"
                 -AS_autres: "arrayList"
             )
         `,
