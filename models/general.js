@@ -67,7 +67,7 @@ export default [
             (
                 -patient_id: "string" !
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
-                -antecedents allergique: "arrayList" ! @< >
+                -antecedents_allergique: "arrayList" ! @< >
                 -mauvaise_habitude: "arrayList" @< fumeur, bruxisme, onychophagie, succion, digigtale, [anything] >
                 -AG_personnel_maladie: "arrayList" ! @< non, [anything] >
                 -AG_personnel_traitement: "arrayList" ! @< non, [anything] >

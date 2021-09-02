@@ -8,6 +8,10 @@ const navigationElements = [
         href: '/pages/patients.html'
     },
     {
+        label: 'common endpoints',
+        href: '/pages/common.html'
+    },
+    {
         label: 'general endpoints',
         href: '/pages/general.html'
     },
