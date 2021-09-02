@@ -51,9 +51,9 @@ export default [
         `
     },
     {
-        title: 'examenOcclusionDynamic collection',
+        title: 'examenOcclusionDynamic collection (odf, paro, prothese)',
         method: 'POST',
-        route: '/common/examenOcclusionDynamic (odf, paro, prothese)',
+        route: '/common/examenOcclusionDynamic',
         request: `
             (
                 -protrution_cote travaillaint: "string" @< >
