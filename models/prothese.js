@@ -7,8 +7,8 @@ export default [
             (
                 -patient_id: "string" !
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
-                -kenedy_apelgate_maxillaire: "string" ! @< cl1, cl2, cl3, cl4, cl5, cl6 >
-                -kenedy_apelgate_mandibule: "string" ! @< cl1, cl2, cl3, cl4, cl5, cl6 >
+                -kenedy_apelgate_maxillaire: "string" ! @< class1, class2, class3, class4, class5, class6 >
+                -kenedy_apelgate_mandibule: "string" ! @< class1, class2, class3, class4, class5, class6 >
                 -decision_therapeutique: "arrayList" ! @< ppac, ppaa, conjoite, implantaire, [anything] >
             )
         `,
@@ -21,7 +21,7 @@ export default [
         `,
         specification: `
             *kenedy_apelgate_maxillaire || kenedy_apelgate_mandibule*
-                -cl1 _ cl2 _ cl3 _ cl4 _ cl5 _ cl6: @< 1, 2, 3, 4, 5, 6 >
+                -class1 _ class2 _ class3 _ class4 _ class5 _ class6: @< 1, 2, 3, 4, 5, 6 >
         `
     },
     {
@@ -32,8 +32,8 @@ export default [
             (
                 -patient_id: "string" !,
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
-                -linda_maxillaire: "string" ! @< cl1, cl2, cl3 >
-                -linda_mandibule: "string" ! @< cl1, cl2, cl3, cl4 >
+                -linda_maxillaire: "string" ! @< class1, class2, class3 >
+                -linda_mandibule: "string" ! @< class1, class2, class3, class4 >
                 -decision_therapeutique: "arrayList" ! @< amovible, amovible_piezographique, stabilise_sur_implant, bridje_complete_sur_implant >
             )
         `,

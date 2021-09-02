@@ -74,7 +74,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !
-                -dp_class_squelettique: "string" ! @< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard >
+                -dp_class_squelettique: "string" ! @< class1_selon_ballard, class2_selon_ballard, class3_selon_ballard >
                 -dp_forme_clinique: "arrayList" ! @< promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, brachy_maxilie, dolicho_mandibulie, brachy_mandibulie >
                 -dp_typologie_faciale: "string" ! @< open_bite, normo_bite, deep_bite >
                 -dp_direction_croissance_faciale: "string" ! @< anterieure, posterieure, moyenne >
@@ -86,8 +86,8 @@ export default [
                 -anomalies_alviolaire_antero_posterieure: "arrayList" @< proalveoliesuperieure, retroalvieliesuperieure, promaxillie, retromaxillie >
                 -anomalies_dentaires: "arrayList" @< ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd  >
                 -diagnostic_etiologique: "arrayList" ! @< heriditaire, heridite_croisee, ventilation_orale, ventilation_mixte, deglutition_atypique_pulsion_languale_anterieure, deglutition_atypique_interposition _anterieure, position_basse_protrusive_langue, mastication_unilaterale, odontome, hypotonicite_levre_superieure, hypotonicite_levre_inferieure, hypertonicite_levre_superieure, hypertonicite_levre_inferieure, [anything] >
-                -diagnostic_differentiel: "arrayList" !@< cl1_selon_ballard, cl2_selon_ballard, cl3_selon_ballard, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, brachy_maxilie, dolicho_mandibulie, brachy_mandibulie, exes_vertical_anterieure, insufisance_verticale_anterieure, endognathie, exognathie, endognathie_unilaterale, exognathie_unilaterale, supralveolie_anterieure, infralveolie_anterieure, infralveole_posterieure, endoalveolie, exoaleolie, endoalveolie_unilaterale, exoaleolie_unilaterale, proalveolie_superieure, retroalvieliesuperieure, retromaxillie, ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd >
-                -plan_trt_objective_squeletique: "arrayList"  @< classe 1 squelitique, normo gnathie, normobite >
+                -diagnostic_differentiel: "arrayList" !@< class1_selon_ballard, class2_selon_ballard, class3_selon_ballard, promaxillie, retromaxillie, pro_mandibulie, retro_mandibulie, dolicho_maxillie, brachy_maxilie, dolicho_mandibulie, brachy_mandibulie, exes_vertical_anterieure, insufisance_verticale_anterieure, endognathie, exognathie, endognathie_unilaterale, exognathie_unilaterale, supralveolie_anterieure, infralveolie_anterieure, infralveole_posterieure, endoalveolie, exoaleolie, endoalveolie_unilaterale, exoaleolie_unilaterale, proalveolie_superieure, retroalvieliesuperieure, retromaxillie, ectopie, dent_surnumeraire, dent_incluse, agenisie, anastrophie, heterodentie, anodentie, oligodentie, dysplasie, dent_riziforme, ddm, ddd >
+                -plan_trt_objective_squeletique: "arrayList"  @< class1_squelitique, normo gnathie, normobite >
                 -plan_trt_objective_fonctionnels: "arrayList"  @< ventilation_nasale, deglutition_physiologique, mastication_unilaterale_alternee, phonation_physiologique, arret_parafonction >
                 -plan_trt_objective_occlusaux: "arrayList" ! @< overjete_physiologique , overbite_physiologique, coincidance_point_interincisif, class1_canine_droite, class1_canine_gauche, class_1_molaire droite, class1_molaire_gauche, class2_molaire_droite_therapeutique, class2_molaire_gauche_therapeutique, class2_molaire_droite_therapeutique, class2_molaire_gauche, therapeutique >
                 -plan_trt_objective_esthetiques: "arrayList" ! @<  >

@@ -28,13 +28,13 @@ export default [
                 -incisive_sagital: "integer" @< range between [~20, ..., +20] >
                 -incisive_transversal: "string" @< coincidence, devie_gauche , devie_droite >
                 -incisive_vertical: "integer" @< range between [~20, ..., +20] >
-                -canine_droite_sagital: "string" @< cl1, cl2 ,cl3 >
+                -canine_droite_sagital: "string" @< class1, class2 ,class3 >
                 -canine_droite_vertical: "string" @< respecte, nonrespecte >
                 -canine_droite_transversal: "string" @< respecte, nonrespecte >
-                -canine_gauche_sagital: "string" @< cl1, cl2, cl3 >
+                -canine_gauche_sagital: "string" @< class1, class2, class3 >
                 -canine_gauche_vertical: "string" @< respecte, nonrespecte >
                 -canine_gauche_transversal: "string" @< respecte, nonrespecte >
-                -molaire_gauche_sagital: "string" @< cl1, cl2, cl3 >
+                -molaire_gauche_sagital: "string" @< class1, class2, class3 >
                 -molaire_gauche_vertical: "string" @< respecte, nonrespecte >
                 -molaire_gauche_transversal: "string" @< respecte, nonrespecte >
                 -molaire_droite_sagital: "string" @< respecte, nonrespecte >

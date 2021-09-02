@@ -65,8 +65,8 @@ export default [
         request: `
             (
                 -patient_id: "string" !
-                -insertion_frien_sup: "string" @< cl1, cl2, cl3, cl4 >
-                -insertion_frien_inf: "string" @< cl1, cl2, cl3, cl4 >
+                -insertion_frien_sup: "string" @< class1, class2, class3, class4 >
+                -insertion_frien_inf: "string" @< class1, class2, class3, class4 >
                 -insertion_frien_lingual: "string" @< pathologique, physiologique >
                 -insertion_frien_autres: "string"
                 -atteints_furcation_1: "arrayList" @< teeth_number >
@@ -86,7 +86,7 @@ export default [
                 -indice_recession_2: "arrayList" @< teeth_number >
                 -indice_recession_3: "arrayList" @< teeth_number >
                 -indice_recession_4: "arrayList" @< teeth_number >
-                -biotype_parodontal: "string" @< cl1, cl2, cl3, cl4 >
+                -biotype_parodontal: "string" @< class1, class2, class3, class4 >
             )
         `,
         response: ``,

@@ -9,7 +9,7 @@ export default [
                 -tooth_number: "integer" !
                 -motif_consultation: "arrayList" ! @< fonctionnele, esthetique, douleure, [anything] >
                 -histoire_maladie: "string"
-                -class_black: "string" @< cl1, cl2, cl3, cl4, cl5 >
+                -class_black: "string" @< class1, classl2, class3, class4, class5 >
                 -class_sit_sta: "string" @< sit_sta[1<1, 2, 3, 4>, 2<1, 2, 3, 4>, 3<1, 2, 3, 4>] >
                 -diagnostic_positive: "string" ! @< baume1, baume2, baume3, baume4 >
                 -diagnostic_etiologique: "string" ! @< carie, traumtisme, [anything] >
