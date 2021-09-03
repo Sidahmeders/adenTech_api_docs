@@ -117,7 +117,7 @@ export default [
         request: `
             (
                 -patient_id: "string" !
-                -hygien_bucaux_dentaire: "string" ! @< mauvais, moyenne, bon >
+                -hygien_buccaux_dentaire: "string" ! @< mauvais, moyenne, bon >
                 -probleme_paro: "string" @< oui, no >
                 -langue_volume: "string" @< macroglossie, microglossie, normoglossie >
                 -langue_situation: "arrayList" @< basse, pulsion_anterieure, interposion_anterieure, interposition_laterale, papille_retro_insisive >
