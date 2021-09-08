@@ -159,8 +159,7 @@ export default [
         `
     },
     {
-        title:
-            '[Add or Update] appointment to an existing patient OR [create a new patient] with appointment',
+        title: '[Add or Update] appointment to an existing patient OR [create a new patient] with appointment',
         method: 'POST',
         route: '/users/patients/appointment',
         request: `
@@ -175,7 +174,7 @@ export default [
                 -data: {
                     --patient: {
                         ---_id: "string"
-                        ---full_name: "string"
+                        ---name: "string"
                         ---appointment: "date"
                         ---phone_number: "integer"
                 --}
