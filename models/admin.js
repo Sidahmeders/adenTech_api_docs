@@ -363,7 +363,6 @@ export default [
                 --users: {
                     ---first_name: "string"
                     ---last_name: "string"
-                    ---patients_id: "arrayList"
                     ---patients_names: "arrayList"
                     ---date_of_creation: "date"
                     ---date_of_modification: "date"
