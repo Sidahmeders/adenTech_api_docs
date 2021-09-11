@@ -315,8 +315,8 @@ export default [
         `,
         response: `
             -data: {
-                -user_id: "string"
-                -name: "string"
+                --user_id: "string"
+                --name: "string"
             -}
         `,
         headers: `
@@ -337,8 +337,37 @@ export default [
         `,
         response: `
             -data: {
-                -user_id: "string"
-                -name: "string"
+                --user_id: "string"
+                --name: "string"
+            -}
+        `,
+        headers: `
+            *Request Headers*
+                -authToken: "HS256_bearer_token" !
+                -accept: "application/json, multipart/form data"
+                -contentType: "multipart/form data" !
+                -credentials: 'include' !
+        `
+    },
+    {
+        title: 'search for users and thier patients',
+        method: 'GET',
+        route: '/admin/users/patients/search?query={queryKey: queryValue}',
+        request: `
+            *Query Paramater*
+                -queryKey: "string" @< first_name, last_name, email, specialty, year_of_study, grade >
+                -queryValue: "string"
+        `,
+        response: `
+            -data: {
+                --users: {
+                    ---first_name: "string"
+                    ---last_name: "string"
+                    ---patients_id: "arrayList"
+                    ---patients_names: "arrayList"
+                    ---date_of_creation: "date"
+                    ---date_of_modification: "date"
+                --}
             -}
         `,
         headers: `
