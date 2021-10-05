@@ -86,7 +86,7 @@ export default [
                 -contentType: "multipart/form data" !
                 -credentials: 'include' !
         `,
-        specification: `
+        description: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
@@ -150,7 +150,7 @@ export default [
                 -contentType: "multipart/form data" !
                 -credentials: 'include' !
         `,
-        specification: `
+        description: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
@@ -244,7 +244,7 @@ export default [
                 -contentType: "multipart/form data" !
                 -credentials: 'include' !
         `,
-        specification: `
+        description: `
             *queryValue*
                 -first_name _ last_name _ email: any string value can be valid as log as the [whole] OR [part] of the string exist in the database
                 -specialty: @< OCE, ODF, PARO, PROTHESE, PCB >

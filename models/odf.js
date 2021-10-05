@@ -31,7 +31,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *maxillaire_malposition*
                 -maxi_teeth_number: @< 11, 12, ..., 47, 48 >
                 -maxi_teeth_malposition: @< ectopique, rotation_axiale, rotation_marginale, version_vestibulaire, 
@@ -62,7 +62,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *tics_habitude*
                 -oui: @< succion_digitale, succion_levre_inferieure, mordillment_levre, bruxisme, onychophagie,succion_tetine, [anything] >
         `
@@ -105,7 +105,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *temps_traitement*
                 -1er_temps _ 2em_temps ____ 29_temps _ 30em_temps: @< orthodontique_amovible_extractionnel, orthodontique_amovible_non_extractionnel, orthodontique_fixe_extractionnel, orthodontique_fixe_no_extractionnel, orthopedique_fonctionnele, orthopedique_mecanique, foctionnele_mecanique, fonctionnele_non_mecanique, orthodontico_chirurgicale >
         `
@@ -208,7 +208,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *rapport_cranio_faciaux_sagittaux_sna*
                 -IF VALUE RANGE BETWEEN(6.00 AND 7.00): position normal du maxillaire paraport a la base du crane 
                 -IF VALUE GREATER than 7.00: position avance du maxillaire paraport a la base du crane

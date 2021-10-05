@@ -61,7 +61,7 @@ function createEndpointElement({
     request,
     response,
     headers,
-    specification
+    description
 }) {
     return `
         <div class="endpoint">
@@ -101,11 +101,11 @@ function createEndpointElement({
                         : '<div style="margin-bottom: -20px"></div>'
                 }
                 ${
-                    specification
-                        ? `<details class="specification">
-                                <summary>options specification</summary>
+                    description
+                        ? `<details class="description">
+                                <summary>options description</summary>
                                 <p>
-                                    ${specification}
+                                    ${description}
                                 </p>
                             </details>`
                         : '<div style="margin-bottom: -20px"></div>'

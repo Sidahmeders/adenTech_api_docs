@@ -14,7 +14,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *decision_terapeutique*
                 -dentinogene _ cementogene _ osteocementogene: @< traitement_urgence, pancements_serie, radiographie_retro_aleolaire_, blanchimente_dente_vivante,
                     radiographie_panoramique, blanchimente_dente_devitalise, coiffage_pulpaire_inderecte, coiffage_pulpaire_derecte, pulpotomie, traitemente_endo_dent_temporaire,
@@ -39,7 +39,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *decision_terapeutique*
             -
             -
@@ -60,7 +60,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *decision_terapeutique*
             -
             -
@@ -81,7 +81,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *decision_terapeutique*
             -
             -
@@ -102,7 +102,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *decision_terapeutique*
             -
             -

@@ -27,7 +27,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *contour*
                 -irregulier: @< malposition, augmentation_hauteur, recession, fisure_stillman, bourellet_maccall, [anything] >
         `

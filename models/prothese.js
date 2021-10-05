@@ -19,7 +19,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *kenedy_apelgate_maxillaire || kenedy_apelgate_mandibule*
                 -class1 _ class2 _ class3 _ class4 _ class5 _ class6: @< 1, 2, 3, 4, 5, 6 >
         `

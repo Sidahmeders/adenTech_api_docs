@@ -40,7 +40,7 @@ export default [
             *Response Headers*
                 -authToken: "HS256_bearer_token" 
         `,
-        specification: `
+        description: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
@@ -107,7 +107,7 @@ export default [
             *Response Headers*
                 -authToken: "HS256_bearer_token"
         `,
-        specification: `
+        description: `
             *role*
                 -_unAuthorized: can't create/update/delete new patients or patients record
                 -_student: can create/update new patients and patients record
@@ -152,7 +152,7 @@ export default [
                 -accept: "application/json"
                 -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *specialty_access*
                 -# this options are meant to allow only the selected service
                 -to access and see what is in the patient document.

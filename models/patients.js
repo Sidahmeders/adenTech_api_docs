@@ -48,7 +48,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *specialty_access*
                 this options are meant to allow only the selected service
                 to access and see what is in the patient document.
@@ -91,7 +91,7 @@ export default [
             -accept: "application/json"
             -contentType: "application/json"
         `,
-        specification: `
+        description: `
             *specialty_access*
                 this options are meant to allow only the selected service
                 to access and see what is in the patient document.
