@@ -167,6 +167,9 @@ export default [
                 -appointment: "date" !
                 -first_name: "string"
                 -last_name: "string"
+                -hour: "string"
+                -_color: "string"
+                -comment: "string"
             )
         `,
         response: `
@@ -178,7 +181,7 @@ export default [
                         ---appointment: "date"
                         ---phone_number: "integer"
                         ---hour: "string"
-                        ---color: "string"
+                        ---_color: "string"
                         ---comment: "string"
                 --}
                 -}
