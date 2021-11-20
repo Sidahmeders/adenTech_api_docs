@@ -177,6 +177,9 @@ export default [
                         ---name: "string"
                         ---appointment: "date"
                         ---phone_number: "integer"
+                        ---hour: "string"
+                        ---color: "string"
+                        ---comment: "string"
                 --}
                 -}
             }
