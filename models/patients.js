@@ -16,6 +16,9 @@ export default [
                 -job: "string"
                 -specialty_access: "arrayList" @< OCE, ODF, PARO, PROTHESE, PCB >
                 -appointment: "date"
+                -hour: "string"
+                -color: "string"
+                -comment: "string"
             )    
         `,
         response: `
