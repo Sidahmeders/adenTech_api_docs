@@ -207,9 +207,12 @@ export default [
                             ---appointment: "date"
                             ---full_name: "string"
                             ---phone_number: "integer"
+                            ---hour: "string"
+                            ---_color: "string
+                            ---comment: "string"
                         ---},
                         ---{ ... },
-                        ---etc...
+                        ---...
                     ---]
                 -}
             }
