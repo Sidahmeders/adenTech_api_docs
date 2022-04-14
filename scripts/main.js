@@ -128,7 +128,7 @@ function alterInnerHtml(innerHTML) {
 }
 
 function alterInnerText(detail) {
-    let innerText = detail.children[1].innerText
+    let innerText = detail.children[1].innerHTML
 
     // match the object entries that are preceded by minus(-) and end by colons(:)
     let entries = innerText.match(RegExp(/-[\w\s]*?\:/, 'g'))
